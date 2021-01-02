@@ -19,6 +19,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": false,
+            "baseHref": "https://alessandroroic.github.io/",
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -130,8 +131,9 @@
           "options": {
             "baseHref": "https://alessandroroic.github.io/",
             "name": "Alessandro Roic",
-            "email": "roic.alessandro@gmail.com"
-          },
+            "email": "roic.alessandro@gmail.com",
+            "branch": "master"
+          }
 
         }
       }
