@@ -9,10 +9,6 @@ import {Title} from '@angular/platform-browser';
 export class AppComponent {
   pageIndex = 0;
 
-  constructor(private titleService: Title) {
-    this.titleService.setTitle('Alessandro Roic');
-  }
-
   changePageIndex(newPageIndex: number) {
     this.pageIndex = newPageIndex;
   }
