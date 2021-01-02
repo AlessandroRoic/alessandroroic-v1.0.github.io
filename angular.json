@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/alessandro-roic-github-pages",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,7 +24,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "./node_modules/roboto-fontface/css/roboto/roboto-fontface.css",
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -89,6 +92,9 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "./node_modules/roboto-fontface/css/roboto/roboto-fontface.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -118,8 +124,22 @@
               "devServerTarget": "alessandro-roic-github-pages:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://alessandroroic.github.io/",
+            "name": "Alessandro Roic",
+            "email": "roic.alessandro@gmail.com"
+          }
         }
       }
-    }},
-  "defaultProject": "alessandro-roic-github-pages"
+    }
+  },
+  "defaultProject": "alessandro-roic-github-pages",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
