@@ -1,11 +1,56 @@
-#mainContent{
-  height: 15%;
+@import "../variables";
+
+.arrow {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: $title-color;
+  background-color: $main-background-color;
+  box-shadow: 0 0 6px black;
+  height: 40px;
+  width: 40px;
 }
 
-#mainContent{
-  height: 80%;
+.arrow:hover {
+  background-color: $card-color
 }
 
-#footer{
-  height: 5%;
+.arrow:active {
+  background-color: $card-color;
+  transform: translateY(4px);
+}
+
+.arrow-text {
+  text-decoration: none;
+  font-size: 20px;
+  color: $title-color;
+}
+
+.logo {
+  height: auto;
+  width: 80px;
+}
+
+.logo:hover {
+  opacity: 0.75;
+}
+
+.logo:active {
+}
+
+.menu-icon {
+  color: $font-color;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.menu-icon:hover {
+  color: $title-color;
+}
+
+.copyright-text {
+  color: grey;
+}
+
+footer {
+  background-color: $footer-color;
 }

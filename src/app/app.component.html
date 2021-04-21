@@ -1,15 +1,28 @@
-<div class="container-fluid h-100">
-  <div class="row justify-content-center" id="navigationBar">
-    <app-header (pageIndexEvent)="changePageIndex($event)"></app-header>
-  </div>
-  <div class="row justify-content-center align-items-center" id="mainContent">
-    <div class="col-6">
-      <app-body [pageIndex]="pageIndex"></app-body>
-    </div>
-  </div>
-  <div class="row" id="footer">
+<div class="container-fluid vh-100 w-100">
+
+  <nav class="navbar fixed-top">
+    <img class="logo" (click)="reloadPage()" src="../assets/logo.svg" alt="">
+    <button class="navbar-toggler" type="button" (click)="showSideBar = !showSideBar">
+      <i class="navbar-toggler-icon menu-icon">≡</i>
+    </button>
+  </nav>
+
+  <app-sidebar [showSideNav]="showSideBar"></app-sidebar>
+
+  <app-main></app-main>
+
+  <footer class="row text-center">
     <div class="col-12">
-      <app-footer></app-footer>
+      <div class="copyright-text">
+        © Copyright 2021 Alessandro Roic. All Rights Reserved.
+      </div>
     </div>
+  </footer>
+
+  <div class="mb-3 mr-3 fixed-bottom text-right" *ngIf="showArrow">
+    <button type="button" class="arrow" (click)="goBackTop()">
+      <span class="arrow-text">▲</span>
+    </button>
   </div>
+
 </div>

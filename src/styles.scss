@@ -1,7 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import "variables";
+
 body, html {
-  background-color: #343238;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  height: 100%;
+  background-color: $main-background-color;
+  font-family: $main-font;
+  color: $font-color;
+  scroll-behavior: smooth
+}
+
+.title-color {
+  color: $title-color;
 }

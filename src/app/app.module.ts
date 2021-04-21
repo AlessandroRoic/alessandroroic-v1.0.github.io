@@ -1,36 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { BodyComponent } from './body/body.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SocialBarComponent } from './social-bar/social-bar.component';
-import { FaIconLibrary, FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { far } from '@fortawesome/free-regular-svg-icons';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import {CarouselModule} from 'ngx-bootstrap';
-import { FooterComponent } from './footer/footer.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {AppComponent} from './app.component';
+import {MainComponent} from './components/main/main.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {SidebarComponent} from './components/sidebar/sidebar.component';
+import {sideBarReducer} from './store/reducers/sidebar.reducer';
+import {StoreModule} from '@ngrx/store';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    BodyComponent,
-    SocialBarComponent,
-    FooterComponent
+    MainComponent,
+    SidebarComponent
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        FontAwesomeModule,
-        CarouselModule
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    StoreModule.forRoot({sidebar: sideBarReducer}),
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-  constructor(library: FaIconLibrary) {
-    library.addIconPacks(fas, far, fab);
-  }
-}
+export class AppModule { }
