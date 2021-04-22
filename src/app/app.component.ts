@@ -1,17 +1,38 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, HostListener, OnDestroy, OnInit} from '@angular/core';
+import {Store} from '@ngrx/store';
+import {openSideNav} from './store/actions/sidenav.action';
+import {AppState} from './store/interfaces/app-state';
+import {getSideNavOpened} from './store/selectors/local-store.selector';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   public showArrow: boolean;
-  public showSideBar: boolean;
-  title = 'Alessandro Roic';
+  public title = 'Alessandro Roic';
+  public sideNavOpened: boolean;
+  private subs: Subscription[] = [];
+
+  get showButtonArrow(): boolean {
+    return this.showArrow && !this.sideNavOpened;
+  }
+
+  constructor(private store$: Store<AppState>) {
+  }
 
   ngOnInit(): void {
     this.showArrow = false;
+    this.subs = [
+      ...this.subs,
+      this.store$.select(getSideNavOpened).subscribe((sideNavOpened: boolean) => this.sideNavOpened = sideNavOpened)
+    ];
+  }
+
+  ngOnDestroy(): void {
+    this.subs.forEach((s: Subscription) => s.unsubscribe());
   }
 
   @HostListener('window:scroll', [])
@@ -31,5 +52,9 @@ export class AppComponent implements OnInit {
 
   reloadPage(): void {
     window.location.reload();
+  }
+
+  showSideNav(): void {
+    this.store$.dispatch(openSideNav());
   }
 }

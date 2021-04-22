@@ -5,11 +5,7 @@
   "projects": {
     "alessandro-roic-github-pages": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -18,13 +14,12 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist",
-            "index": "src/index.html",
+            "index": "index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
+            "aot": false,
             "assets": [
-              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
@@ -88,7 +83,6 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
@@ -135,5 +129,10 @@
       }
     }
   },
-  "defaultProject": "alessandro-roic-github-pages"
+  "defaultProject": "alessandro-roic-github-pages",
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss"
+    }
+  }
 }

@@ -8,38 +8,29 @@
   left: 0;
   right: 0;
 
-  .side-nav-bar-overlay {
+  .overlay {
     background: rgba(0,0,0,0.5);
     width: 100%;
     height: 100%;
   }
 
-  .side-nav-bar-menu-container {
+  .menu-container {
     position: absolute;
     top: 0;
     bottom: 0;
     background: $footer-color;
-    display: flex;
-    flex-direction: column;
 
-    .side-nav-bar-close {
-      display: inline-block;
+    .close-button {
       font-size: 2.5em;
-      margin: 24px 0px 0px 24px;
-      cursor: pointer;
     }
-  }
-
-  .side-nav-bar-content-container {
-    padding: 32px;
   }
 }
 
-.side-nav-bar-overlay-collapsed {
+.overlay-collapsed {
   background: transparent !important;
 }
 
-.side-nav-bar-collapsed {
+.collapsed {
   visibility: collapse !important;
 }
 

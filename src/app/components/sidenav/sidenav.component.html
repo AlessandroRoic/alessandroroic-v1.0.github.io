@@ -1,0 +1,25 @@
+<div class="side-nav-bar" [ngClass]="{ 'collapsed': !sideNavOpened}">
+
+  <div class="overlay"
+       [ngStyle]="{ 'transition': 'background-color ' + duration + 's, visibility ' + duration + 's' }"
+       [ngClass]="{ 'overlay-collapsed': !sideNavOpened}"
+       (click)="closeSideNav()"></div>
+
+  <div class="menu-container container-fluid" [ngStyle]="getSideNavBarStyle(sideNavOpened)">
+
+    <div class="row mt-3">
+      <div class="col-2">
+        <div class="close-button" (click)="closeSideNav()">x</div>
+      </div>
+    </div>
+
+    <div class="row mt-3" *ngIf="sideNavOpened">
+      <div class="col-12">
+        <div @fadeInGrow class="ml-auto">
+          <div @item><a class="menu-text" href="#about" (click)="closeSideNav()">ABOUT</a></div>
+          <div @item><a class="menu-text" href="#work" (click)="closeSideNav()">WORK</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

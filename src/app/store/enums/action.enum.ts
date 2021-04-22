@@ -1,4 +1,4 @@
 export enum Action {
-  SIDEBAR_OPENED = '[Sidebar] Opened',
-  SIDEBAR_CLOSED = '[Sidebar] Closed'
+  SIDE_NAV_OPENED = '[Sidenav] Opened',
+  SIDE_NAV_CLOSED = '[Sidenav] Closed'
 }

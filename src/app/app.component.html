@@ -2,12 +2,12 @@
 
   <nav class="navbar fixed-top">
     <img class="logo" (click)="reloadPage()" src="../assets/logo.svg" alt="">
-    <button class="navbar-toggler" type="button" (click)="showSideBar = !showSideBar">
+    <button class="navbar-toggler" type="button" (click)="showSideNav()" *ngIf="!sideNavOpened">
       <i class="navbar-toggler-icon menu-icon">≡</i>
     </button>
   </nav>
 
-  <app-sidebar [showSideNav]="showSideBar"></app-sidebar>
+  <app-sidebar></app-sidebar>
 
   <app-main></app-main>
 
@@ -19,7 +19,7 @@
     </div>
   </footer>
 
-  <div class="mb-3 mr-3 fixed-bottom text-right" *ngIf="showArrow">
+  <div class="mb-3 mr-3 fixed-bottom text-right" *ngIf="showButtonArrow">
     <button type="button" class="arrow" (click)="goBackTop()">
       <span class="arrow-text">▲</span>
     </button>
