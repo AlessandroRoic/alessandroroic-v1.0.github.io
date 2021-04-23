@@ -1,37 +1,20 @@
 @import "../../../variables";
 
-.side-nav-bar {
+.side-nav {
   position: fixed;
-  z-index: 1001;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 9999;
 
   .overlay {
     background: rgba(0,0,0,0.5);
-    width: 100%;
-    height: 100%;
   }
 
-  .menu-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
+  .menu {
     background: $footer-color;
-
-    .close-button {
-      font-size: 2.5em;
-    }
   }
-}
-
-.overlay-collapsed {
-  background: transparent !important;
-}
-
-.collapsed {
-  visibility: collapse !important;
 }
 
 .menu-text {
@@ -43,4 +26,13 @@
 .menu-text:hover {
   text-decoration: underline;
   text-decoration-color: $title-color;
+}
+
+.close-button {
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.close-button:hover {
+  color: $title-color;
 }

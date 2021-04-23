@@ -1,23 +1,22 @@
-<div class="side-nav-bar" [ngClass]="{ 'collapsed': !sideNavOpened}">
+<div class="container-fluid side-nav vh-100 w-100 p-0">
+  <div class="row vh-100 w-100 m-0" @sideNav>
 
-  <div class="overlay"
-       [ngStyle]="{ 'transition': 'background-color ' + duration + 's, visibility ' + duration + 's' }"
-       [ngClass]="{ 'overlay-collapsed': !sideNavOpened}"
-       (click)="closeSideNav()"></div>
+    <div @overlayFade class="col-10 overlay" (click)="closeSideNav()"></div>
 
-  <div class="menu-container container-fluid" [ngStyle]="getSideNavBarStyle(sideNavOpened)">
+    <div @sideNavSlide class="col-2 menu">
 
-    <div class="row mt-3">
-      <div class="col-2">
-        <div class="close-button" (click)="closeSideNav()">x</div>
+      <div class="row mt-3">
+        <div class="col-2">
+          <div (click)="closeSideNav()"><span class="close-button">x</span></div>
+        </div>
       </div>
-    </div>
 
-    <div class="row mt-3" *ngIf="sideNavOpened">
-      <div class="col-12">
-        <div @fadeInGrow class="ml-auto">
-          <div @item><a class="menu-text" href="#about" (click)="closeSideNav()">ABOUT</a></div>
-          <div @item><a class="menu-text" href="#work" (click)="closeSideNav()">WORK</a></div>
+      <div class="row mt-3" *ngIf="sideNavOpened">
+        <div class="col-12">
+          <div @fadeInGrow>
+            <div @item><a class="menu-text" href="#about" (click)="closeSideNav()">ABOUT</a></div>
+            <div @item><a class="menu-text" href="#work" (click)="closeSideNav()">WORK</a></div>
+          </div>
         </div>
       </div>
     </div>

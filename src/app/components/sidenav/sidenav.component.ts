@@ -5,28 +5,29 @@ import {Store} from '@ngrx/store';
 import {closeSideNav} from '../../store/actions/sidenav.action';
 import {AppState} from '../../store/interfaces/app-state';
 import {getSideNavOpened} from '../../store/selectors/local-store.selector';
+import {overlayFade, sideNav, sideNavSlide} from '../../animations/slide-in-animation';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
-  animations: [fadeInGrow, item]
+  animations: [fadeInGrow, item, sideNavSlide, overlayFade, sideNav]
 })
 export class SidenavComponent implements OnInit, OnDestroy {
 
   public sideNavOpened: boolean;
-  public duration = 0.25;
-  private direction = 'right';
   private subs: Subscription[] = [];
+  private sideNavState: string;
 
-  get navWidth(): number {
-    return window.visualViewport.width / 3;
+  get sideNavAnimationState(): string {
+    return this.sideNavState === 'out' ? 'in' : 'out';
   }
 
   constructor(private store$: Store<AppState>) {
   }
 
   ngOnInit(): void {
+    this.sideNavState = 'out';
     this.subs = [
       ...this.subs,
       this.store$.select(getSideNavOpened).subscribe((sideNavOpened: boolean) => this.sideNavOpened = sideNavOpened)
@@ -39,16 +40,6 @@ export class SidenavComponent implements OnInit, OnDestroy {
 
   closeSideNav(): void {
     this.store$.dispatch(closeSideNav());
-  }
-
-  getSideNavBarStyle(showNav?: boolean): any {
-    const navBarStyle: any = {};
-
-    navBarStyle.transition = this.direction + ' ' + this.duration + 's, visibility ' + this.duration + 's';
-    navBarStyle.width = this.navWidth + 'px';
-    navBarStyle[this.direction] = (showNav ? 0 : (this.navWidth * -1)) + 'px';
-
-    return navBarStyle;
   }
 
 }
