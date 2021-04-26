@@ -121,7 +121,6 @@
           "builder": "angular-cli-ghpages:deploy",
           "options": {
             "name": "AlessandroRoic",
-            "email": "roic.alessandro@gmail.com",
             "branch": "master",
             "repo": "https://github.com/AlessandroRoic/alessandroroic.github.io.git"
           }
