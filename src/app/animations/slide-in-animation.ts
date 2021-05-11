@@ -3,11 +3,11 @@ import {animate, animateChild, group, query, sequence, style, transition, trigge
 export const sideNavSlide = trigger('sideNavSlide', [
   transition(':enter', [
     style({transform: 'translate3d(100%, 0, 0)'}),
-    animate('0.35s ease-in', style({
+    animate('0.25s ease-in', style({
       transform: 'translate3d(0, 0, 0)'
     }))
   ]),
-  transition(':leave', animate('0.35s ease-out', style({
+  transition(':leave', animate('0.25s ease-out', style({
     transform: 'translate3d(100%, 0, 0)'
   })))
 ]);
@@ -27,12 +27,18 @@ export const overlayFade = trigger('overlayFade', [
 
 export const sideNav = trigger('sideNav', [
   transition(':enter', group([
-    sequence([
-      query('@sideNavSlide', animateChild(), {optional: true}),
-      query('@fadeInGrow', animateChild(), {optional: true})
-    ]),
+    group([
+      animate('0.25s ease-in', style({ background: 'rgba(0,0,0,0.5)' })),
+      sequence([
+        query('@sideNavSlide', animateChild(), {optional: true}),
+        query('@fadeInGrow', animateChild(), {optional: true})
+      ]),
+    ])
   ])),
   transition(':leave', group([
+    group([
+      animate('0.25s', style({ background: 'rgba(0,0,0,0)' })),
       query('@sideNavSlide', animateChild(), {optional: true}),
+    ]),
   ]))
 ]);
