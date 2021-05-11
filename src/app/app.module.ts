@@ -8,12 +8,14 @@ import {StoreModule} from '@ngrx/store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {environment} from '../environments/environment';
 import {reducers} from './store';
+import {SocialMediasComponent} from './components/social-medias/social-medias.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    SidenavComponent
+    SidenavComponent,
+    SocialMediasComponent
   ],
   imports: [
     BrowserModule,

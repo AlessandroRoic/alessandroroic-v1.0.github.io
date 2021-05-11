@@ -1,25 +1,34 @@
-<div class="container-fluid side-nav vh-100 w-100 p-0">
+<div class="container-fluid d-flex flex-column side-nav p-0">
 
-  <div class="row vh-100 w-100 m-0" @sideNav>
+  <div @sideNav class="row vh-100 m-0">
 
-    <div class="col-10" (click)="closeSideNav()"></div>
+    <div class="col-7 col-md-10 col-lg-9 col-xl-10" (click)="closeSideNav()"></div>
 
-    <div @sideNavSlide class="col-2 menu">
+    <div @sideNavSlide class="menu col-5 col-md-2 col-lg-3 col-xl-2">
 
-      <div class="row mt-3">
+      <div class="row mt-4">
         <div class="col-2">
-          <div (click)="closeSideNav()"><span class="close-button">x</span></div>
+          <div (click)="closeSideNav()">
+            <svg class="close-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
+            </svg>
+          </div>
         </div>
       </div>
 
-      <div class="row mt-3" *ngIf="sideNavOpened">
-        <div class="col-12">
+      <div class="row mt-5">
+        <div class="col-12 text-center">
           <div @fadeInGrow>
             <div @item><a class="menu-text" href="#about" (click)="closeSideNav()">ABOUT</a></div>
             <div @item><a class="menu-text" href="#work" (click)="closeSideNav()">WORK</a></div>
           </div>
         </div>
       </div>
+
+      <div class="social-media-wrapper">
+        <app-social-medias></app-social-medias>
+      </div>
+
     </div>
   </div>
 </div>

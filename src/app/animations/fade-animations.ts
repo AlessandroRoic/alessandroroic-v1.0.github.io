@@ -3,12 +3,12 @@ import {animate, animateChild, query, stagger, style, transition, trigger} from 
 export const fadeInGrow = trigger('fadeInGrow', [
   transition(':enter', [
     query('@item', [
-      stagger(200, animateChild())
+      stagger(175, animateChild())
     ], { optional: true })
   ]),
   transition(':leave', [
     query('@item', [
-      stagger(200, animateChild())
+      stagger(175, animateChild())
     ], { optional: true })
   ])
 ]);

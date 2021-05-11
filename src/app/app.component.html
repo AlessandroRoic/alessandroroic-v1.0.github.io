@@ -1,28 +1,46 @@
+<app-sidebar *ngIf="sideNavOpened"></app-sidebar>
+
 <div class="container-fluid vh-100 w-100">
 
   <nav class="navbar fixed-top">
-    <img class="logo" (click)="reloadPage()" src="../assets/logo.svg" alt="">
-    <button class="navbar-toggler" type="button" (click)="showSideNav()" *ngIf="!sideNavOpened">
-      <i class="navbar-toggler-icon menu-icon">≡</i>
-    </button>
-  </nav>
+    <svg class="logo ms-3" (click)="reloadPage()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.088 69.088">
+      <rect x="11.17836352247172" y="11.17836352247172" transform="rotate(45, 34.544, 34.544)" fill="none"
+            stroke="#e84a5f" stroke-width="3" width="43.73127295505655" height="43.73127295505655">
+      </rect>
+      <path fill="#eeeeee" fill-rule="nonzero"
+            d="M9.12 1.44L14.59 17.09L11.11 17.09L10.15 14.14L4.42 14.14L3.48 17.09L0 17.09L5.47 1.44Q5.83 0.62 6.28 0.31Q6.72 0 7.37 0Q8.02 0 8.41 0.29Q8.81 0.58 9.12 1.44L9.12 1.44ZM5.26 11.33L9.38 11.33L7.37 4.56L5.26 11.33Z"
+            transform="translate(27.248, 23)">
+      </path>
+    </svg>
 
-  <app-sidebar *ngIf="sideNavOpened"></app-sidebar>
+    <div class="navbar-toggler" (click)="showSideNav()" *ngIf="!sideNavOpened">
+      <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+      </svg>
+    </div>
+  </nav>
 
   <app-main></app-main>
 
-  <footer class="row text-center">
+  <footer class="row text-center pt-3 mt-5">
     <div class="col-12">
-      <div class="copyright-text">
-        © Copyright 2021 Alessandro Roic. All Rights Reserved.
+      <app-social-medias [isFooter]="true"></app-social-medias>
+      <div class="row">
+        <div class="col-12">
+          <div class="copyright-text">
+            © Copyright 2021 Alessandro Roic. <br> All Rights Reserved.
+          </div>
+        </div>
       </div>
     </div>
   </footer>
 
-  <div class="mb-3 mr-3 fixed-bottom text-right" *ngIf="showButtonArrow">
-    <button type="button" class="arrow" (click)="goBackTop()">
-      <span class="arrow-text">▲</span>
-    </button>
-  </div>
+  <button type="button" class="arrow fixed-bottom mb-3 me-3" (click)="goBackTop()" *ngIf="showButtonArrow">
+    <svg class="arrow-text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+            d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+    </svg>
+  </button>
 
 </div>

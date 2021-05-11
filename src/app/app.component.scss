@@ -1,13 +1,17 @@
 @import "../variables";
 
 .arrow {
-  border-radius: 50%;
+  border-radius: 10%;
   border-style: solid;
   border-color: $title-color;
   background-color: $main-background-color;
   box-shadow: 0 0 6px black;
   height: 40px;
   width: 40px;
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
 }
 
 .arrow:hover {
@@ -20,9 +24,9 @@
 }
 
 .arrow-text {
-  text-decoration: none;
-  font-size: 20px;
-  color: $title-color;
+  width: 32px;
+  height: 32px;
+  fill: $title-color;
 }
 
 .logo {
@@ -38,13 +42,13 @@
 }
 
 .menu-icon {
-  color: $font-color;
-  font-weight: bold;
-  font-size: 35px;
+  fill: $font-color;
+  width: 32px;
+  height: 32px
 }
 
 .menu-icon:hover {
-  color: $title-color;
+  fill: $title-color;
 }
 
 .copyright-text {

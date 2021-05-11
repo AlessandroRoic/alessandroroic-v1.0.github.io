@@ -11,25 +11,39 @@
 
   .menu {
     background: $footer-color;
+
+    .menu-text {
+      color: $font-color;
+      font-weight: bold;
+      font-size: 25px;
+      text-decoration: none;
+    }
+
+    .menu-text:hover {
+      text-decoration: underline;
+      text-decoration-color: $title-color;
+    }
+
+    .close-button {
+      width: 32px;
+      height: 32px;
+      fill: $font-color
+    }
+
+    .close-button:hover {
+      fill: $title-color;
+    }
+
+    @media screen and (min-width: 769px){
+      .social-media-wrapper {
+        margin-top: calc(100vh - 225px)
+      }
+    }
+
+    @media screen and (max-width: 768px){
+      .social-media-wrapper {
+        margin-top: calc(100vh - 275px)
+      }
+    }
   }
-}
-
-.menu-text {
-  color: $font-color;
-  font-weight: bold;
-  font-size: 25px;
-}
-
-.menu-text:hover {
-  text-decoration: underline;
-  text-decoration-color: $title-color;
-}
-
-.close-button {
-  cursor: pointer;
-  font-size: 25px;
-}
-
-.close-button:hover {
-  color: $title-color;
 }
