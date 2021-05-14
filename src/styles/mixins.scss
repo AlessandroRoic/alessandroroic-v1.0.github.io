@@ -1,0 +1,8 @@
+@mixin scaleText($initialValue) {
+  font-size: calc(#{$initialValue} + (100vw / 320));
+}
+
+@mixin scaleSvg($initialValue) {
+  height: calc(#{$initialValue} + (100vw / 320));
+  width: calc(#{$initialValue} + (100vw / 320));
+}

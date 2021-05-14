@@ -11,20 +11,20 @@ import {Subscription} from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
-  public showArrow: boolean;
+  public isScrolled: boolean;
   public title = 'Alessandro Roic';
   public sideNavOpened: boolean;
   private subs: Subscription[] = [];
 
   get showButtonArrow(): boolean {
-    return this.showArrow && !this.sideNavOpened;
+    return this.isScrolled && !this.sideNavOpened;
   }
 
   constructor(private store$: Store<AppState>) {
   }
 
   ngOnInit(): void {
-    this.showArrow = false;
+    this.isScrolled = false;
     this.subs = [
       ...this.subs,
       this.store$.select(getSideNavOpened).subscribe((sideNavOpened: boolean) => this.sideNavOpened = sideNavOpened)
@@ -38,16 +38,12 @@ export class AppComponent implements OnInit, OnDestroy {
   @HostListener('window:scroll', [])
   onScrollActivateArrow(): void {
     const scrollLength = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollLength > 100) {
-      this.showArrow = true;
-    } else if (this.showArrow && scrollLength < 10) {
-      this.showArrow = false;
-    }
+    this.isScrolled = scrollLength > 50;
   }
 
   goBackTop(): void {
     window.scrollTo(0, 0);
-    this.showArrow = false;
+    this.isScrolled = false;
   }
 
   reloadPage(): void {

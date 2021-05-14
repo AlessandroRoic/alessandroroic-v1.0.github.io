@@ -1,4 +1,5 @@
 @import "../variables";
+@import "../styles/mixins";
 
 .arrow {
   border-radius: 10%;
@@ -6,8 +7,7 @@
   border-color: $title-color;
   background-color: $main-background-color;
   box-shadow: 0 0 6px black;
-  height: 40px;
-  width: 40px;
+  @include scaleSvg(40px);
   display: flex;
   margin-left: auto;
   align-items: center;
@@ -24,27 +24,21 @@
 }
 
 .arrow-text {
-  width: 32px;
-  height: 32px;
+  @include scaleSvg(32px);
   fill: $title-color;
 }
 
 .logo {
-  height: auto;
-  width: 80px;
+  @include scaleSvg(90px);
 }
 
 .logo:hover {
   opacity: 0.75;
 }
 
-.logo:active {
-}
-
 .menu-icon {
   fill: $font-color;
-  width: 32px;
-  height: 32px
+  @include scaleSvg(42px);
 }
 
 .menu-icon:hover {
@@ -57,4 +51,9 @@
 
 footer {
   background-color: $footer-color;
+}
+
+.nav-scrolled {
+  box-shadow: 1px 4px 14px 0 rgba(0,0,0,0.69);
+  background-color: $main-background-color;
 }

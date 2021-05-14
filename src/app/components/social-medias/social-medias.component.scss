@@ -1,9 +1,9 @@
 @import "../../../variables";
+@import "../../../styles/mixins";
 
 .social-icon {
   fill: $font-color;
-  width: 32px;
-  height: 32px;
+  @include scaleSvg(32px)
 }
 
 .social-icon:hover {
