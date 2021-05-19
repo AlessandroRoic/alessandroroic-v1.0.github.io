@@ -1,6 +1,10 @@
 @import "../../../variables";
 @import "../../../styles/mixins";
 
+.title-color {
+  color: $title-color;
+}
+
 .my-card {
   padding: 20px;
   border: 5px solid $title-color;

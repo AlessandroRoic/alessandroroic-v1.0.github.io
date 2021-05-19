@@ -17,4 +17,7 @@ export class SocialMediasComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openSite(siteUrl: string): void {
+    window.open('https://' + siteUrl, '_blank');
+  }
 }
