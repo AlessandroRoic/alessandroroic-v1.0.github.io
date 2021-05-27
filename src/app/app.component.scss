@@ -9,7 +9,6 @@
   box-shadow: 0 0 6px black;
   @include scaleSvg(40px);
   display: flex;
-  margin-left: auto;
   align-items: center;
   justify-content: center;
 }
@@ -24,8 +23,9 @@
 }
 
 .arrow-text {
-  @include scaleSvg(32px);
-  fill: $title-color;
+  @include scaleText(20px);
+  color: $title-color;
+  transform: rotate(-90deg);
 }
 
 .logo {

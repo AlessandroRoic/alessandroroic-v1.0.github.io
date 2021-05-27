@@ -17,17 +17,11 @@ export class SidenavComponent implements OnInit, OnDestroy {
 
   public sideNavOpened: boolean;
   private subs: Subscription[] = [];
-  private sideNavState: string;
-
-  get sideNavAnimationState(): string {
-    return this.sideNavState === 'out' ? 'in' : 'out';
-  }
 
   constructor(private store$: Store<AppState>) {
   }
 
   ngOnInit(): void {
-    this.sideNavState = 'out';
     this.subs = [
       ...this.subs,
       this.store$.select(getSideNavOpened).subscribe((sideNavOpened: boolean) => this.sideNavOpened = sideNavOpened)
