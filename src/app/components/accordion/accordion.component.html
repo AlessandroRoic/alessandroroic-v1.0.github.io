@@ -1,10 +1,11 @@
-<section class="accordion-wrapper">
-  <div *ngFor="let element of content;">
+<div class="accordion-wrapper">
+  <div class="accordion-btn" *ngFor="let element of content;">
     <button class="accordion-btn d-flex justify-content-between"
-            (click)="element.open = !element.open">
+            [ngClass]="{'button-opened': element.opened}"
+            (click)="element.opened = !element.opened">
       <span>{{element.title}}</span>
       <span>˅</span>
     </button>
-    <div class="accordion-text" *ngIf="element.open" [innerHTML]="element.content"></div>
+    <div @accordionSlide class="accordion-text" *ngIf="element.opened" [innerHTML]="element.content"></div>
   </div>
-</section>
+</div>

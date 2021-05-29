@@ -4,11 +4,13 @@ import {openSideNav} from './store/actions/sidenav.action';
 import {AppState} from './store/interfaces/app-state';
 import {getSideNavOpened} from './store/selectors/local-store.selector';
 import {Subscription} from 'rxjs';
+import {item} from './animations/fade-animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [item]
 })
 export class AppComponent implements OnInit, OnDestroy {
   public isScrolled: boolean;

@@ -17,22 +17,22 @@ export class MainComponent implements OnInit {
       {
         title: 'Accenture',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        open: true
+        opened: true
       },
       {
         title: 'JPanik',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        open: false
+        opened: false
       },
       {
         title: 'Education',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        open: false
+        opened: false
       },
       {
         title: 'Other',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        open: false
+        opened: false
       }
     ];
   }

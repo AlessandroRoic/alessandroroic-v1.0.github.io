@@ -5,45 +5,76 @@
   box-shadow: 0 0 0 3px $card-color;
 }
 
-div {
+.accordion-btn {
+
+  position: relative;
+  z-index: auto;
+
   button {
     width: 100%;
     color: $font-color;
-    border: 3px solid $title-color;
     background-color: $main-background-color;
   }
+
 }
 
-div:first-child {
+.accordion-btn:not(:first-child):not(:last-child) {
+
+  border-bottom: 3px solid $title-color;
+
   button {
-    border-radius: $card-border-radius $card-border-radius 0 0;
+    border: 3px solid $title-color;
+    border-top: 0;
+    border-bottom: 0;
   }
-}
 
-div:nth-child(2) {
-  button {
+  .button-opened {
+    border: 3px solid $title-color;
     border-top: 0;
   }
+
 }
 
-div:last-child {
+.accordion-btn:first-child {
+
+  border-bottom: 3px solid $title-color;
+
   button {
+    border: 3px solid $title-color;
+    border-bottom: 0;
+    border-radius: $card-border-radius $card-border-radius 0 0;
+  }
+
+  .button-opened {
+    border: 3px solid $title-color;
+  }
+
+}
+
+.accordion-btn:last-child {
+
+  button {
+    border: 3px solid $title-color;
     border-top: 0;
     border-radius: 0 0 $card-border-radius $card-border-radius;
   }
-}
 
-div:not(:first-child):not(:last-child) {
-  button {
+  .button-opened {
+    border: 3px solid $title-color;
     border-top: 0;
-    border-bottom: 3px solid $title-color;;
+    border-radius: 0;
   }
+
+  .accordion-text {
+    border-bottom: 0;
+  }
+
 }
 
 .accordion-text {
   border-top: 5px solid $footer-color;
   border-bottom: 5px solid $footer-color;
-  border-left: 1px solid $footer-color;
-  border-right: 1px solid $footer-color;
   padding: 5px;
+  position: relative;
+  z-index: auto;
 }
