@@ -9,13 +9,15 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {environment} from '../environments/environment';
 import {reducers} from './store';
 import {SocialMediasComponent} from './components/social-medias/social-medias.component';
+import {AccordionComponent} from './components/accordion/accordion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     SidenavComponent,
-    SocialMediasComponent
+    SocialMediasComponent,
+    AccordionComponent
   ],
   imports: [
     BrowserModule,

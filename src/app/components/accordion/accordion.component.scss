@@ -1,0 +1,49 @@
+@import "../../../variables";
+
+.accordion-wrapper {
+  border-radius: $card-border-radius;
+  box-shadow: 0 0 0 3px $card-color;
+}
+
+div {
+  button {
+    width: 100%;
+    color: $font-color;
+    border: 3px solid $title-color;
+    background-color: $main-background-color;
+  }
+}
+
+div:first-child {
+  button {
+    border-radius: $card-border-radius $card-border-radius 0 0;
+  }
+}
+
+div:nth-child(2) {
+  button {
+    border-top: 0;
+  }
+}
+
+div:last-child {
+  button {
+    border-top: 0;
+    border-radius: 0 0 $card-border-radius $card-border-radius;
+  }
+}
+
+div:not(:first-child):not(:last-child) {
+  button {
+    border-top: 0;
+    border-bottom: 3px solid $title-color;;
+  }
+}
+
+.accordion-text {
+  border-top: 5px solid $footer-color;
+  border-bottom: 5px solid $footer-color;
+  border-left: 1px solid $footer-color;
+  border-right: 1px solid $footer-color;
+  padding: 5px;
+}
