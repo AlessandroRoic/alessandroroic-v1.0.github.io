@@ -10,6 +10,7 @@ import {environment} from '../environments/environment';
 import {reducers} from './store';
 import {SocialMediasComponent} from './components/social-medias/social-medias.component';
 import {AccordionComponent} from './components/accordion/accordion.component';
+import {BackTopArrowComponent} from './components/back-top-arrow/back-top-arrow.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {AccordionComponent} from './components/accordion/accordion.component';
     MainComponent,
     SidenavComponent,
     SocialMediasComponent,
-    AccordionComponent
+    AccordionComponent,
+    BackTopArrowComponent
   ],
   imports: [
     BrowserModule,

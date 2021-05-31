@@ -1,33 +1,6 @@
 @import "../variables";
 @import "../styles/mixins";
 
-.arrow {
-  border-radius: 10%;
-  border-style: solid;
-  border-color: $title-color;
-  background-color: $main-background-color;
-  box-shadow: 0 0 6px black;
-  @include scaleSvg(40px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.arrow:hover {
-  background-color: $card-color
-}
-
-.arrow:active {
-  background-color: $card-color;
-  transform: translateY(4px);
-}
-
-.arrow-text {
-  @include scaleText(20px);
-  color: $title-color;
-  transform: rotate(-90deg);
-}
-
 .logo {
   @include scaleSvg(90px);
 }
