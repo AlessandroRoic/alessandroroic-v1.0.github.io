@@ -1,12 +1,13 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {AccordionContent} from '../../models/accordion-content';
 import {accordionSlide} from '../../animations/slide-in-animation';
+import {rotateArrow} from '../../animations/rotation-animations';
 
 @Component({
   selector: 'app-accordion',
   templateUrl: './accordion.component.html',
   styleUrls: ['./accordion.component.scss'],
-  animations: [accordionSlide]
+  animations: [accordionSlide, rotateArrow]
 })
 export class AccordionComponent implements OnInit {
 

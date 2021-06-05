@@ -3,77 +3,77 @@
 .accordion-wrapper {
   border-radius: $card-border-radius;
   box-shadow: 0 0 0 3px $card-color;
-}
 
-.accordion-btn {
+  .accordion-btn {
 
-  position: relative;
+    position: relative;
 
-  button {
-    width: 100%;
-    color: $font-color;
-    background-color: $main-background-color;
+    button {
+      width: 100%;
+      color: $font-color;
+      background-color: $main-background-color;
+    }
+
   }
 
-}
+  .accordion-btn:not(:first-child):not(:last-child) {
 
-.accordion-btn:not(:first-child):not(:last-child) {
+    border-bottom: 3px solid $title-color;
 
-  border-bottom: 3px solid $title-color;
+    button {
+      border: 3px solid $title-color;
+      border-top: 0;
+      border-bottom: 0;
+    }
 
-  button {
-    border: 3px solid $title-color;
-    border-top: 0;
-    border-bottom: 0;
+    .button-opened {
+      border: 3px solid $title-color;
+      border-top: 0;
+    }
+
   }
 
-  .button-opened {
-    border: 3px solid $title-color;
-    border-top: 0;
+  .accordion-btn:first-child {
+
+    border-bottom: 3px solid $title-color;
+
+    button {
+      border: 3px solid $title-color;
+      border-bottom: 0;
+      border-radius: $card-border-radius $card-border-radius 0 0;
+    }
+
+    .button-opened {
+      border: 3px solid $title-color;
+    }
+
   }
 
-}
+  .accordion-btn:last-child {
 
-.accordion-btn:first-child {
+    button {
+      border: 3px solid $title-color;
+      border-top: 0;
+      border-radius: 0 0 $card-border-radius $card-border-radius;
+    }
 
-  border-bottom: 3px solid $title-color;
+    .button-opened {
+      border: 3px solid $title-color;
+      border-top: 0;
+      border-radius: 0;
+    }
 
-  button {
-    border: 3px solid $title-color;
-    border-bottom: 0;
-    border-radius: $card-border-radius $card-border-radius 0 0;
-  }
+    .accordion-text {
+      border-bottom: 0;
+    }
 
-  .button-opened {
-    border: 3px solid $title-color;
-  }
-
-}
-
-.accordion-btn:last-child {
-
-  button {
-    border: 3px solid $title-color;
-    border-top: 0;
-    border-radius: 0 0 $card-border-radius $card-border-radius;
-  }
-
-  .button-opened {
-    border: 3px solid $title-color;
-    border-top: 0;
-    border-radius: 0;
   }
 
   .accordion-text {
-    border-bottom: 0;
+    border-top: 5px solid $footer-color;
+    border-bottom: 5px solid $footer-color;
+    padding: 5px;
+    position: relative;
+    overflow: hidden;
   }
-
-}
-
-.accordion-text {
-  border-top: 5px solid $footer-color;
-  border-bottom: 5px solid $footer-color;
-  padding: 5px;
-  position: relative;
-  overflow: hidden;
 }
