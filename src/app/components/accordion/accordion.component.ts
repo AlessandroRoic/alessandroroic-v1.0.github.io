@@ -17,4 +17,10 @@ export class AccordionComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  openAccordion(index): void {
+    this.content.forEach((element, elementIndex) => {
+      element.opened = elementIndex === index;
+    });
+  }
 }

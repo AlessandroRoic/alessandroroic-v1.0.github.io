@@ -45,14 +45,14 @@ export const sideNav = trigger('sideNav', [
 
 export const accordionSlide = trigger('accordionSlide', [
   transition(':enter', [
-    style({'max-height': '0'}),
+    style({height: '0'}),
     animate('0.25s ease-in', style({
-      'max-height': '5000px'
+      height: '*'
     }))
   ]),
   transition(':leave', [
-    animate('0.25s', style({
-      height: '0'
+    animate('0.25s ease-out', style({
+      height: '0px'
     }))
   ])
 ]);
