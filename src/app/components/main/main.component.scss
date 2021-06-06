@@ -36,16 +36,3 @@
 .card-text {
   @include scaleText(16px);
 }
-
-@media screen and (min-width: 425px) {
-  .card-spacing {
-    height:100vh;
-  }
-}
-
-@media screen and (max-width: 424px)  {
-  .card-spacing {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-  }
-}

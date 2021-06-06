@@ -17,7 +17,7 @@
   </div>
 </section>
 
-<section class="row align-items-center justify-content-center g-0 card-spacing" id="about">
+<section class="row align-items-center justify-content-center g-0 vh-100" id="about">
   <div class="col-12 col-md-10 col-lg-8 col-xxl-6 my-card card-text">
     <div class="row">
       <div class="col-12">
@@ -39,7 +39,7 @@
   </div>
 </section>
 
-<section class="row align-items-center justify-content-center g-0 card-spacing" id="work">
+<section class="row align-items-center justify-content-center g-0 vh-100" id="work">
   <div class="col-12 col-md-10 col-lg-8 col-xxl-6 my-card card-text">
     <div class="row">
       <div class="col-12">
@@ -47,7 +47,9 @@
       </div>
     </div>
     <div class="row">
-      <app-accordion [content]="accordionList"></app-accordion>
+      <div class="col-12">
+        <app-accordion [content]="accordionList"></app-accordion>
+      </div>
     </div>
   </div>
 </section>

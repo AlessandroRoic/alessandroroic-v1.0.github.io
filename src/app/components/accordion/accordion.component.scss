@@ -1,4 +1,5 @@
 @import "../../../variables";
+@import "../../../styles/mixins";
 
 .accordion-wrapper {
   border-radius: $card-border-radius;
@@ -6,7 +7,11 @@
 
   .accordion-btn {
 
-    position: relative;
+    .arrow {
+      height: 24px;
+      width: 24px;
+      fill: $font-color
+    }
 
     button {
       width: 100%;
@@ -73,7 +78,6 @@
     border-top: 5px solid $footer-color;
     border-bottom: 5px solid $footer-color;
     padding: 5px;
-    position: relative;
     overflow: hidden;
   }
 }
