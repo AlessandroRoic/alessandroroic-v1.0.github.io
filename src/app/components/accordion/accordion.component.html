@@ -9,9 +9,8 @@
         <path d="M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z"/>
       </svg>
     </button>
-    <div @accordionSlide
+    <div [@accordionSlide]="!element.opened && 'open'"
          class="accordion-text"
-         *ngIf="element.opened"
          [innerHTML]="element.content"></div>
   </div>
 </div>

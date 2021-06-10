@@ -1,4 +1,4 @@
-import {animate, animateChild, group, query, sequence, style, transition, trigger} from '@angular/animations';
+import {animate, animateChild, group, query, sequence, state, style, transition, trigger} from '@angular/animations';
 
 export const sideNavSlide = trigger('sideNavSlide', [
   transition(':enter', [
@@ -44,17 +44,14 @@ export const sideNav = trigger('sideNav', [
 ]);
 
 export const accordionSlide = trigger('accordionSlide', [
-  transition(':enter', [
-    style({height: 0}),
-    animate('0.35s ease-in', style({
-      height: '*'
-    }))
-  ]),
-  transition(':leave', [
-    style({padding: 0, border: 0}),
-    animate('0.35s ease-out', style({
-      height: 0
-    }))
-  ])
+  state('open', style({
+    height: 0,
+    opacity: 0,
+    visibility: 'hidden',
+    padding: 0,
+    'border-top': 0,
+    'border-bottom': 0
+  })),
+  transition('open<=>*', animate('0.35s ease-in-out'))
 ]);
 
