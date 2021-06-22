@@ -44,14 +44,15 @@ export const sideNav = trigger('sideNav', [
 ]);
 
 export const accordionSlide = trigger('accordionSlide', [
-  state('open', style({
+  state('close', style({
     height: 0,
     opacity: 0,
-    visibility: 'hidden',
     padding: 0,
     'border-top': 0,
-    'border-bottom': 0
+    'border-bottom': 0,
+    overflow: 'hidden'
   })),
-  transition('open<=>*', animate('0.35s ease-in-out'))
+  state('open', style({overflow: 'hidden'})),
+  transition('open<=>close', animate('0.35s ease-in-out'))
 ]);
 

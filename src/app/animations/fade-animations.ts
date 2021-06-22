@@ -4,24 +4,24 @@ export const fadeInGrow = trigger('fadeInGrow', [
   transition(':enter', [
     query('@item', [
       stagger(150, animateChild())
-    ], { optional: true })
+    ], {optional: true})
   ]),
   transition(':leave', [
     query('@item', [
       stagger(150, animateChild())
-    ], { optional: true })
+    ], {optional: true})
   ])
 ]);
 
 export const item = trigger('item', [
   transition(':enter', [
-    style({ transform: 'scale(0.5)', opacity: 0 }),
+    style({transform: 'scale(0.5)', opacity: 0}),
     animate('0.25s cubic-bezier(.8, -0.6, 0.2, 1.5)',
-      style({ transform: 'scale(1)', opacity: 1 }))
+      style({transform: 'scale(1)', opacity: 1}))
   ]),
   transition(':leave', [
-    style({ opacity: 1 }),
+    style({opacity: 1}),
     animate('0.25s',
-      style({ opacity: 0 }))
+      style({opacity: 0}))
   ])
 ]);

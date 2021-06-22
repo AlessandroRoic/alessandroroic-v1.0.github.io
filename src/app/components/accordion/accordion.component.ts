@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {AccordionContent} from '../../models/accordion-content';
 import {accordionSlide} from '../../animations/slide-in-animation';
 import {rotateArrow} from '../../animations/rotation-animations';
@@ -9,15 +9,9 @@ import {rotateArrow} from '../../animations/rotation-animations';
   styleUrls: ['./accordion.component.scss'],
   animations: [accordionSlide, rotateArrow]
 })
-export class AccordionComponent implements OnInit {
+export class AccordionComponent {
 
   @Input() content: AccordionContent[];
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
 
   openAccordion(index): void {
     this.content.forEach((element, elementIndex) => {

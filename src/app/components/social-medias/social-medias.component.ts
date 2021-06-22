@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {fadeInGrow, item} from '../../animations/fade-animations';
 
 @Component({
@@ -7,15 +7,9 @@ import {fadeInGrow, item} from '../../animations/fade-animations';
   styleUrls: ['./social-medias.component.scss'],
   animations: [item, fadeInGrow]
 })
-export class SocialMediasComponent implements OnInit {
+export class SocialMediasComponent {
 
   @Input() isFooter: boolean;
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
 
   openSite(siteUrl: string): void {
     window.open('https://' + siteUrl, '_blank');

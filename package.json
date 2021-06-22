@@ -4,10 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postbuild": "node src/environments/postbuild.js"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +24,7 @@
     "@ngrx/store-devtools": "^11.1.1",
     "angular-cli-ghpages": "^1.0.0-rc.2",
     "bootstrap": "5.0.0",
+    "purgecss": "^4.0.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
@@ -42,6 +44,7 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.6.0",
     "protractor": "~7.0.0",
+    "purgecss": "^4.0.3",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.1.5"

@@ -8,9 +8,9 @@ describe('BackTopArrowComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BackTopArrowComponent ]
+      declarations: [BackTopArrowComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {item} from '../../animations/fade-animations';
 
 @Component({
@@ -7,18 +7,12 @@ import {item} from '../../animations/fade-animations';
   styleUrls: ['./back-top-arrow.component.scss'],
   animations: [item]
 })
-export class BackTopArrowComponent implements OnInit {
+export class BackTopArrowComponent {
 
   @Input() isScrolled: boolean;
 
   get showButtonArrow(): boolean {
     return this.isScrolled;
-  }
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
   }
 
   goBackTop(): void {
