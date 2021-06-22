@@ -43,3 +43,4 @@ function getFilesFromPath(dir, extension) {
   let files = fs.readdirSync(dir);
   return files.filter(e => path.extname(e).toLowerCase() === extension);
 }
+
