@@ -21,10 +21,9 @@ jobs:
         run: |
           npm install -g @angular/cli
           npm install
-          ng build
+          npm run build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: master
-          FOLDER: dist
+          branch: master
+          folder: dist
