@@ -22,7 +22,6 @@ jobs:
           npm install -g @angular/cli
           npm install
           ng build
-          ng postbuild
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         env:
