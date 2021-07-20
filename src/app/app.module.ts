@@ -11,6 +11,7 @@ import {reducers} from './store';
 import {SocialMediasComponent} from './components/social-medias/social-medias.component';
 import {AccordionComponent} from './components/accordion/accordion.component';
 import {BackTopArrowComponent} from './components/back-top-arrow/back-top-arrow.component';
+import {AccordionPanelComponent} from './components/accordion/panel/accordion-panel.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {BackTopArrowComponent} from './components/back-top-arrow/back-top-arrow.
     SidenavComponent,
     SocialMediasComponent,
     AccordionComponent,
-    BackTopArrowComponent
+    BackTopArrowComponent,
+    AccordionPanelComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,74 @@
+@import "../../../../variables";
+
+
+%button-common {
+  width: 100%;
+  color: $font-color;
+  background-color: $main-background-color;
+  border: 3px solid $title-color;
+}
+
+.arrow {
+  height: 24px;
+  width: 24px;
+  fill: $font-color
+}
+
+.accordion-btn-middle {
+
+  border-bottom: 3px solid $title-color;
+
+  button {
+    @extend %button-common;
+    border-top: 0;
+    border-bottom: 0;
+  }
+
+  .button-opened {
+    border: 3px solid $title-color;
+    border-top: 0;
+  }
+
+}
+
+.accordion-btn-first {
+
+  border-bottom: 3px solid $title-color;
+
+  button {
+    @extend %button-common;
+    border-bottom: 0;
+    border-radius: $card-border-radius $card-border-radius 0 0;
+  }
+
+  .button-opened {
+    border: 3px solid $title-color;
+  }
+
+}
+
+.accordion-btn-last {
+
+  button {
+    @extend %button-common;
+    border-top: 0;
+    border-radius: 0 0 $card-border-radius $card-border-radius;
+  }
+
+  .button-opened {
+    border: 3px solid $title-color;
+    border-top: 0;
+    border-radius: 0;
+  }
+
+  .accordion-text {
+    border-bottom: 0;
+  }
+
+}
+
+.accordion-text {
+  border-top: 5px solid $footer-color;
+  border-bottom: 5px solid $footer-color;
+  padding: 5px;
+}
