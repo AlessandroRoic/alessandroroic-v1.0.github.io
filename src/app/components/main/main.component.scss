@@ -11,20 +11,11 @@
   box-shadow: 0 0 0 5px $card-color;
   border-radius: $card-border-radius;
 
-  .card-font {
-    fill: $font-color;
-  }
-
   .side-photo {
     height: 168px;
     width: 150px;
     box-shadow: 0 0 10px black;
     border-radius: $card-border-radius;
-  }
-
-  .highlight {
-    fill: $title-color;
-    text-decoration: underline;
   }
 
 }
