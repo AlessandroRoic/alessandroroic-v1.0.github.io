@@ -1,0 +1,14 @@
+<svg fill="#eeeeee" id="welcome-card" viewBox="0 0 169 60" xmlns="http://www.w3.org/2000/svg">
+  <text x="0" y="15">
+    Hello,
+  </text>
+  <text x="0" y="35">
+    This is
+  </text>
+  <text fill="#e84a5f" text-decoration="underline" x="50" y="35">
+    Alessandro Roic
+  </text>
+  <text x="0" y="55">
+    Front End Developer
+  </text>
+</svg>
