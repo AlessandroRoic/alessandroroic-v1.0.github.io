@@ -13,10 +13,10 @@ export class AccordionComponent implements AfterContentInit, OnDestroy {
   private subscriptions: Subscription[] = [];
 
   ngAfterContentInit(): void {
-    this.panels[0].opened = true;
     this.panels.forEach((panel: AccordionPanelComponent, index: number) => {
       if (index === 0) {
         panel.buttonClass = PanelStyleEnum.FIRST;
+        panel.opened = true;
       } else if (index < this.panels.length - 1) {
         panel.buttonClass = PanelStyleEnum.MIDDLE;
       } else {
