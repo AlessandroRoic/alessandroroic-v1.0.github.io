@@ -1,7 +1,8 @@
 <div @fadeInGrow class="row align-items-center justify-content-center" [ngClass]="{'g-0': !isFooter}">
 
   <div @item class="text-center" [ngClass]="isFooter ? 'col-auto' : 'col-6 col-lg-3 mb-3'">
-    <button (click)="openSite('github.com/AlessandroRoic')" class="social-button" type="button">
+    <button (click)="openSite('github.com/AlessandroRoic')" aria-label="github" class="social-button"
+            type="button">
       <svg class="social-icon">
         <use href="assets/icons/github.svg#github"></use>
       </svg>
@@ -9,7 +10,8 @@
   </div>
 
   <div @item class="text-center" [ngClass]="isFooter ? 'col-auto' : 'col-6 col-lg-3 mb-3'">
-    <button (click)="openSite('linkedin.com/in/alessandroroic')" class="social-button" type="button">
+    <button (click)="openSite('linkedin.com/in/alessandroroic')" aria-label="linkedin" class="social-button"
+            type="button">
       <svg class="social-icon">
         <use href="assets/icons/linkedin.svg#linkedin"></use>
       </svg>
@@ -17,7 +19,7 @@
   </div>
 
   <div @item class="text-center" [ngClass]="isFooter ? 'col-auto' : 'col-6 col-lg-3 mb-3'">
-    <button (click)="openSite('')" class="social-button" type="button">
+    <button (click)="openSite('')" aria-label="cv" class="social-button" type="button">
       <svg class="social-icon">
         <use href="assets/icons/cv.svg#cv"></use>
       </svg>
@@ -25,7 +27,7 @@
   </div>
 
   <div @item class="text-center" [ngClass]="isFooter ? 'col-auto' : 'col-6 col-lg-3 mb-3'">
-    <button (click)="openSite('')" class="social-button" type="button">
+    <button (click)="openSite('')" aria-label="email" class="social-button" type="button">
       <svg class="social-icon">
         <use href="assets/icons/email.svg#email"></use>
       </svg>
