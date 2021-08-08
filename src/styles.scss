@@ -16,3 +16,11 @@ body, html {
   scroll-behavior: smooth;
   font-family: 'Rubik', sans-serif
 }
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/Rubik-Regular.woff2) format('woff2');
+}
