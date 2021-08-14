@@ -1,42 +1,48 @@
-import {AfterContentInit, Component, ContentChildren, OnDestroy, QueryList} from '@angular/core';
-import {AccordionPanelComponent} from './panel/accordion-panel.component';
-import {Subscription} from 'rxjs';
-import {PanelStyleEnum} from '../../enums/panel-style.enum';
+import { AfterContentInit, Component, ContentChildren, OnDestroy, QueryList } from '@angular/core';
+import { Subscription } from 'rxjs';
+import AccordionPanelComponent from './panel/accordion-panel.component';
+import { PanelStyleEnum } from '../../enums/panel-style.enum';
 
 @Component({
   selector: 'app-accordion',
   templateUrl: './accordion.component.html',
-  styleUrls: ['./accordion.component.scss']
+  styleUrls: ['./accordion.component.scss'],
 })
-export class AccordionComponent implements AfterContentInit, OnDestroy {
+export default class AccordionComponent implements AfterContentInit, OnDestroy {
   @ContentChildren(AccordionPanelComponent) panels: QueryList<AccordionPanelComponent>;
+
   private subscriptions: Subscription[] = [];
 
-  ngAfterContentInit(): void {
-    this.panels.forEach((panel: AccordionPanelComponent, index: number) => {
+  public ngAfterContentInit(): void {
+    this.panels.map((panel: AccordionPanelComponent, index: number) => {
+      const tempPanel = panel;
       if (index === 0) {
-        panel.buttonClass = PanelStyleEnum.FIRST;
-        panel.opened = true;
+        tempPanel.buttonClass = PanelStyleEnum.FIRST;
+        tempPanel.opened = true;
       } else if (index < this.panels.length - 1) {
-        panel.buttonClass = PanelStyleEnum.MIDDLE;
+        tempPanel.buttonClass = PanelStyleEnum.MIDDLE;
       } else {
-        panel.buttonClass = PanelStyleEnum.LAST;
+        tempPanel.buttonClass = PanelStyleEnum.LAST;
       }
       this.subscriptions = [
         ...this.subscriptions,
-        panel.toggle.subscribe(() => {
-          this.openPanel(panel);
-        })
+        tempPanel.toggle.subscribe(() => {
+          this.openPanel(index);
+        }),
       ];
+      return tempPanel;
     });
   }
 
-  ngOnDestroy(): void {
+  public ngOnDestroy(): void {
     this.subscriptions.forEach((subscription: Subscription) => subscription.unsubscribe());
   }
 
-  private openPanel(panel: AccordionPanelComponent): void {
-    this.panels.forEach((p: AccordionPanelComponent) => p.opened = false);
-    panel.opened = true;
+  private openPanel(selectedIndex: number): void {
+    this.panels.map((panel: AccordionPanelComponent, index: number) => {
+      const tempPanel = panel;
+      tempPanel.opened = selectedIndex === index;
+      return tempPanel;
+    });
   }
 }

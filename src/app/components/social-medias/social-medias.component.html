@@ -1,8 +1,6 @@
-<div @fadeInGrow class="row align-items-center justify-content-center" [ngClass]="{'g-0': !isFooter}">
-
+<div @fadeInGrow [ngClass]="{ 'g-0': !isFooter }" class="row align-items-center justify-content-center">
   <div @item class="text-center" [ngClass]="isFooter ? 'col-auto' : 'col-6 col-lg-3 mb-3'">
-    <button (click)="openSite('github.com/AlessandroRoic')" aria-label="github" class="social-button"
-            type="button">
+    <button (click)="openSite('github.com/AlessandroRoic')" aria-label="github" class="social-button" type="button">
       <svg class="social-icon">
         <use href="assets/icons/icons.svg#github"></use>
       </svg>
@@ -10,8 +8,7 @@
   </div>
 
   <div @item class="text-center" [ngClass]="isFooter ? 'col-auto' : 'col-6 col-lg-3 mb-3'">
-    <button (click)="openSite('linkedin.com/in/alessandroroic')" aria-label="linkedin" class="social-button"
-            type="button">
+    <button (click)="openSite('linkedin.com/in/alessandroroic')" aria-label="linkedin" class="social-button" type="button">
       <svg class="social-icon">
         <use href="assets/icons/icons.svg#linkedin"></use>
       </svg>
@@ -33,5 +30,4 @@
       </svg>
     </button>
   </div>
-
 </div>

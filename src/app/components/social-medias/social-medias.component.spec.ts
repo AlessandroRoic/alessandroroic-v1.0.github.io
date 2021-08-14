@@ -1,6 +1,6 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {SocialMediasComponent} from './social-medias.component';
+import SocialMediasComponent from './social-medias.component';
 
 describe('SocialMediasComponent', () => {
   let component: SocialMediasComponent;
@@ -8,9 +8,8 @@ describe('SocialMediasComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SocialMediasComponent]
-    })
-      .compileComponents();
+      declarations: [SocialMediasComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

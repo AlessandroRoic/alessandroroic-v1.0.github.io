@@ -8,5 +8,5 @@ const getLocalStore = createFeatureSelector<AppState, LocalStore>(localStoreKey)
 
 export const getSideNavOpened: MemoizedSelector<AppState, boolean> = createSelector(
   getLocalStore,
-  (state: LocalStore): boolean => (state.sideNavOpened)
+  (state: LocalStore): boolean => state.sideNavOpened,
 );

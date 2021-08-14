@@ -1,6 +1,5 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-
-import {AccordionPanelComponent} from './accordion-panel.component';
+import AccordionPanelComponent from './accordion-panel.component';
 
 describe('PanelComponent', () => {
   let component: AccordionPanelComponent;
@@ -8,9 +7,8 @@ describe('PanelComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AccordionPanelComponent ]
-    })
-    .compileComponents();
+      declarations: [AccordionPanelComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

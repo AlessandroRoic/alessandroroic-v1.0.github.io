@@ -1,6 +1,6 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {BackTopArrowComponent} from './back-top-arrow.component';
+import BackTopArrowComponent from './back-top-arrow.component';
 
 describe('BackTopArrowComponent', () => {
   let component: BackTopArrowComponent;
@@ -8,9 +8,8 @@ describe('BackTopArrowComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [BackTopArrowComponent]
-    })
-      .compileComponents();
+      declarations: [BackTopArrowComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

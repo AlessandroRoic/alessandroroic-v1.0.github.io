@@ -1,46 +1,51 @@
-import {Component, HostListener, OnDestroy, OnInit} from '@angular/core';
-import {Store} from '@ngrx/store';
-import {openSideNav} from './store/actions/sidenav.action';
-import {AppState} from './store/interfaces/app-state';
-import {getSideNavOpened} from './store/selectors/local-store.selector';
-import {Subscription} from 'rxjs';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Subscription } from 'rxjs';
+import { openSideNav } from './store/actions/sidenav.action';
+import { AppState } from './store/interfaces/app-state';
+import { getSideNavOpened } from './store/selectors/local-store.selector';
+import UtilsService from './services/utils.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit, OnDestroy {
+export default class AppComponent implements OnInit, OnDestroy {
   public isScrolled: boolean;
+
   public title = 'Alessandro Roic';
+
   public sideNavOpened: boolean;
+
   private subs: Subscription[] = [];
 
-  constructor(private store$: Store<AppState>) {
-  }
+  constructor(private store$: Store<AppState>, private utils: UtilsService) {}
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.subs = [
       ...this.subs,
-      this.store$.select(getSideNavOpened).subscribe((sideNavOpened: boolean) => this.sideNavOpened = sideNavOpened)
+      this.store$.select(getSideNavOpened).subscribe((sideNavOpened: boolean) => {
+        this.sideNavOpened = sideNavOpened;
+      }),
     ];
   }
 
-  ngOnDestroy(): void {
+  public ngOnDestroy(): void {
     this.subs.forEach((s: Subscription) => s.unsubscribe());
   }
 
-  @HostListener('window:scroll', [])
-  onScrollActivateArrow(): void {
-    const scrollLength = window.pageYOffset || document.documentElement.scrollTop;
-    this.isScrolled = scrollLength > 50;
+  public reloadPage(): void {
+    this.utils.reloadPage();
   }
 
-  reloadPage(): void {
-    window.location.reload();
-  }
-
-  showSideNav(): void {
+  public showSideNav(): void {
     this.store$.dispatch(openSideNav());
+  }
+
+  @HostListener('window:scroll', [])
+  public onScrollActivateArrow(): void {
+    const scrollLength: number = window.pageYOffset || document.documentElement.scrollTop;
+    this.isScrolled = scrollLength > 50;
   }
 }

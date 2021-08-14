@@ -1,8 +1,7 @@
 <app-sidebar *ngIf="sideNavOpened"></app-sidebar>
 
 <div class="container-fluid vh-100 w-100">
-
-  <nav class="navbar fixed-top p-0" [ngClass]="{'nav-scrolled': isScrolled}">
+  <nav class="navbar fixed-top p-0" [ngClass]="{ 'nav-scrolled': isScrolled }">
     <svg (click)="reloadPage()" class="navbar-toggler logo">
       <use href="assets/icons/icons.svg#site-logo"></use>
     </svg>
@@ -19,13 +18,10 @@
     <div class="col-12">
       <app-social-medias [isFooter]="true"></app-social-medias>
       <div class="row mt-1">
-        <div class="col-12">
-          © Copyright 2021 Alessandro Roic. All Rights Reserved.
-        </div>
+        <div class="col-12">© Copyright 2021 Alessandro Roic. All Rights Reserved.</div>
       </div>
     </div>
   </footer>
 
   <app-back-top-arrow [isScrolled]="isScrolled"></app-back-top-arrow>
-
 </div>

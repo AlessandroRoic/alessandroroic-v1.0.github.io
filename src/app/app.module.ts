@@ -1,17 +1,17 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {AppComponent} from './app.component';
-import {MainComponent} from './components/main/main.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {SidenavComponent} from './components/sidenav/sidenav.component';
-import {StoreModule} from '@ngrx/store';
-import {StoreDevtoolsModule} from '@ngrx/store-devtools';
-import {environment} from '../environments/environment';
-import {reducers} from './store';
-import {SocialMediasComponent} from './components/social-medias/social-medias.component';
-import {AccordionComponent} from './components/accordion/accordion.component';
-import {BackTopArrowComponent} from './components/back-top-arrow/back-top-arrow.component';
-import {AccordionPanelComponent} from './components/accordion/panel/accordion-panel.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import AppComponent from './app.component';
+import MainComponent from './components/main/main.component';
+import SidenavComponent from './components/sidenav/sidenav.component';
+import { environment } from '../environments/environment';
+import { reducers } from './store';
+import SocialMediasComponent from './components/social-medias/social-medias.component';
+import AccordionComponent from './components/accordion/accordion.component';
+import BackTopArrowComponent from './components/back-top-arrow/back-top-arrow.component';
+import AccordionPanelComponent from './components/accordion/panel/accordion-panel.component';
 
 @NgModule({
   declarations: [
@@ -21,16 +21,15 @@ import {AccordionPanelComponent} from './components/accordion/panel/accordion-pa
     SocialMediasComponent,
     AccordionComponent,
     BackTopArrowComponent,
-    AccordionPanelComponent
+    AccordionPanelComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     StoreModule.forRoot(reducers),
-    StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-}
+export default class AppModule {}
