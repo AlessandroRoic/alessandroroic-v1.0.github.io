@@ -12,6 +12,8 @@
   border-radius: $card-border-radius;
 
   .side-photo {
+    margin-right: 10px;
+    margin-bottom: 10px;
     height: 168px;
     width: 150px;
     box-shadow: 0 0 10px black;
@@ -22,4 +24,14 @@
 
 .card-text {
   @include scaleText(16px);
+}
+
+.first-section-spacing{
+  padding-top: 10px;
+  padding-bottom: 15vh;
+}
+
+.section-spacing {
+  padding-top: 15vh;
+  padding-bottom: 15vh;
 }
