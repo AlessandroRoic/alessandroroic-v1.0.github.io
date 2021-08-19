@@ -10,16 +10,42 @@
   <div class="col-12 col-md-10 col-lg-8 col-xxl-6 my-card card-text">
     <div class="row">
       <div class="col-12">
-        <h1 class="title-color mb-3">About Me</h1>
+        <h1 class="title-color mb-3"><b>About Me</b></h1>
       </div>
     </div>
+
     <div class="row">
       <div class="col-12">
         <img alt="profile" class="side-photo float-start" src="../../../assets/profile.jpg" />
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Hi, I'm Alessandro and as you read before in the giant sign above I'm a Front End Developer. I've worked in a
+          <a class="title-color" href="#jpanik">small software business</a> and currently working in a
+          <a class="title-color" href="#accenture">major consulting multinational</a>.
         </p>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-12">Here some languages, frameworks and technologies that I'm using:</div>
+    </div>
+
+    <div class="row">
+      <div class="col-auto"><p class="pill">Javascript (ES6+)</p></div>
+      <div class="col-auto"><p class="pill">Typescript</p></div>
+      <div class="col-auto"><p class="pill">CSS / SCSS</p></div>
+      <div class="col-auto"><p class="pill">AngularJs & Angular</p></div>
+      <div class="col-auto"><p class="pill">Node.js</p></div>
+      <div class="col-auto"><p class="pill">RxJs</p></div>
+      <div class="col-auto"><p class="pill">Bootstrap</p></div>
+      <div class="col-auto"><p class="pill">Java / Java EE</p></div>
+      <div class="col-auto"><p class="pill">Spring</p></div>
+      <div class="col-auto"><p class="pill">PostgreSQL</p></div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-12">
+        I aspire to be a Game Developer and it has been a dream of mine since I've realized how games make people engaged and passionate,
+        and I always wanted to build something that would create that effect.
       </div>
     </div>
   </div>
@@ -29,38 +55,43 @@
   <div class="col-12 col-md-10 col-lg-8 col-xxl-6 my-card card-text">
     <div class="row">
       <div class="col-12">
-        <h1 class="title-color mb-3">Work</h1>
+        <h1 class="title-color mb-3"><b>Work</b></h1>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
         <app-accordion>
-          <app-panel [title]="'Accenture'">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <app-panel [title]="'Accenture'" id="accenture">
+            <p><u>February 2021</u> - <u>Present</u></p>
+            <p><span class="title-color">Role:</span> Junior Front End Developer</p>
+            <ul>
+              <li>Develop and maintain a customer service platform for the italian post service</li>
+              <li>Work with many languages,</li>
+              <li>Agile Development</li>
+            </ul>
           </app-panel>
-          <app-panel [title]="'JPanik'">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <app-panel [title]="'JPanik'" id="jpanik">
+            <p>January 2020 - February 2021</p>
           </app-panel>
-          <app-panel [title]="'Education'">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <app-panel [title]="'University'">
+            <p>September 2016 – April 2020</p>
+            <p>Sapienza University of Rome</p>
+            <p>Computer Science Degree</p>
           </app-panel>
-          <app-panel [title]="'Other'">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </app-panel>
+          <app-panel [title]="'Certifications & Courses'"> </app-panel>
         </app-accordion>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="row align-items-center justify-content-center g-0 section-spacing" id="projects">
+  <div class="col-12 col-md-10 col-lg-8 col-xxl-6 my-card card-text">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="title-color mb-3"><b>Projects</b></h1>
+      </div>
+    </div>
+    <div class="row"></div>
   </div>
 </section>

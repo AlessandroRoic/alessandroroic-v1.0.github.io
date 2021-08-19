@@ -2,13 +2,13 @@
 @import "../../../styles/mixins";
 
 .title-color {
-  color: $title-color;
+  color: $paradise-pink;
 }
 
 .my-card {
   padding: 20px;
-  border: 5px solid $title-color;
-  box-shadow: 0 0 0 5px $card-color;
+  border: 5px solid $paradise-pink;
+  box-shadow: 0 0 0 5px $charcoal;
   border-radius: $card-border-radius;
 
   .side-photo {
@@ -23,15 +23,46 @@
 }
 
 .card-text {
-  @include scaleText(16px);
+  @include scaleText(15px);
 }
 
-.first-section-spacing{
+.first-section-spacing {
   padding-top: 10px;
-  padding-bottom: 15vh;
+  padding-bottom: 17vh;
 }
 
 .section-spacing {
-  padding-top: 15vh;
-  padding-bottom: 15vh;
+  padding-top: 17vh;
+  padding-bottom: 17vh;
+}
+
+.text-dashed {
+  text-decoration-style: dashed;
+}
+
+%pill-style {
+  border-radius: $card-border-radius;
+  background: $silver;
+  color: $gunmetal;
+  margin-bottom: 10px;
+}
+
+.pill {
+  @extend %pill-style;
+  padding: 5px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li::marker {
+  color: $paradise-pink;
+  content: "●";
+}
+
+li {
+  @extend %pill-style;
+  list-style-position: inside;
 }

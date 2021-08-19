@@ -10,19 +10,19 @@
 }
 
 .menu-icon {
-  fill: $font-color;
+  fill: $cultured;
   @include scaleSvg(42px);
 }
 
 .menu-icon:hover {
-  fill: $title-color;
+  fill: $paradise-pink;
 }
 
 footer {
-  background-color: $footer-color;
+  background-color: $charcoal;
 }
 
 .nav-scrolled {
   box-shadow: 1px 4px 14px 0 rgba(0, 0, 0, 0.69);
-  background-color: $main-background-color;
+  background-color: $gunmetal;
 }

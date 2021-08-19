@@ -3,20 +3,20 @@
 
 %button-common {
   width: 100%;
-  color: $font-color;
-  background-color: $main-background-color;
-  border: 3px solid $title-color;
+  color: $cultured;
+  background-color: $gunmetal;
+  border: 3px solid $paradise-pink;
 }
 
 .arrow {
   height: 24px;
   width: 24px;
-  fill: $font-color
+  fill: $cultured
 }
 
 .accordion-btn-middle {
 
-  border-bottom: 3px solid $title-color;
+  border-bottom: 3px solid $paradise-pink;
 
   button {
     @extend %button-common;
@@ -25,7 +25,7 @@
   }
 
   .button-opened {
-    border: 3px solid $title-color;
+    border: 3px solid $paradise-pink;
     border-top: 0;
   }
 
@@ -33,7 +33,7 @@
 
 .accordion-btn-first {
 
-  border-bottom: 3px solid $title-color;
+  border-bottom: 3px solid $paradise-pink;
 
   button {
     @extend %button-common;
@@ -42,7 +42,7 @@
   }
 
   .button-opened {
-    border: 3px solid $title-color;
+    border: 3px solid $paradise-pink;
   }
 
 }
@@ -56,7 +56,7 @@
   }
 
   .button-opened {
-    border: 3px solid $title-color;
+    border: 3px solid $paradise-pink;
     border-top: 0;
     border-radius: 0;
   }
@@ -68,7 +68,7 @@
 }
 
 .accordion-text {
-  border-top: 5px solid $footer-color;
-  border-bottom: 5px solid $footer-color;
+  border-top: 5px solid $charcoal;
+  border-bottom: 5px solid $charcoal;
   padding: 5px;
 }

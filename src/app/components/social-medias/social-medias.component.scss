@@ -2,12 +2,12 @@
 @import "../../../styles/mixins";
 
 .social-icon {
-  fill: $font-color;
+  fill: $cultured;
   @include scaleSvg(32px)
 }
 
 .social-icon:hover {
-  fill: $title-color;
+  fill: $paradise-pink;
 }
 
 .social-button {

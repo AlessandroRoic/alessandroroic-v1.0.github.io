@@ -4,8 +4,8 @@
 .arrow {
   border-radius: 10%;
   border-style: solid;
-  border-color: $title-color;
-  background-color: $main-background-color;
+  border-color: $paradise-pink;
+  background-color: $gunmetal;
   box-shadow: 0 0 6px black;
   @include scaleSvg(40px);
   display: flex;
@@ -14,16 +14,16 @@
 }
 
 .arrow:hover {
-  background-color: $card-color
+  background-color: $charcoal
 }
 
 .arrow:active {
-  background-color: $card-color;
+  background-color: $charcoal;
   transform: translateY(4px);
 }
 
 .arrow-text {
   @include scaleText(20px);
-  color: $title-color;
+  color: $paradise-pink;
   transform: rotate(-90deg);
 }

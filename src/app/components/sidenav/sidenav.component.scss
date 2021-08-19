@@ -11,28 +11,28 @@
   background: rgba(0, 0, 0, 0.5);
 
   .menu {
-    background: $footer-color;
+    background: $charcoal;
 
     .menu-text {
-      color: $font-color;
+      color: $cultured;
       font-weight: bold;
       @include scaleText(25px);
       text-decoration: underline;
-      text-decoration-color: $title-color;
+      text-decoration-color: $paradise-pink;
     }
 
     .menu-text:hover {
-      color: $title-color;
-      text-decoration-color: $font-color;
+      color: $paradise-pink;
+      text-decoration-color: $cultured;
     }
 
     .close-button {
       @include scaleSvg(32px);
-      fill: $font-color
+      fill: $cultured
     }
 
     .close-button:hover {
-      fill: $title-color;
+      fill: $paradise-pink;
     }
   }
 }
