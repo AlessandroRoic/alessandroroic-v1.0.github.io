@@ -10,41 +10,63 @@
   <div class="col-12 col-md-10 col-lg-8 col-xxl-6 my-card card-text">
     <div class="row">
       <div class="col-12">
-        <h1 class="title-color mb-3"><b>About Me</b></h1>
+        <h1 class="paradise-pink mb-3"><b>About Me</b></h1>
       </div>
     </div>
 
     <div class="row">
       <div class="col-12">
-        <img alt="profile" class="side-photo float-start" src="../../../assets/profile.jpg" />
+        <img alt="profile" class="side-photo float-start" src="../../../assets/profile.jpg"/>
         <p>
           Hi, I'm Alessandro and as you read before in the giant sign above I'm a Front End Developer. I've worked in a
-          <a class="title-color" href="#jpanik">small software business</a> and currently working in a
-          <a class="title-color" href="#accenture">major consulting multinational</a>.
+          <a class="paradise-pink" href="#jpanik">small software business</a> and currently working in a
+          <a class="paradise-pink" href="#accenture">major consulting multinational</a>. Right now my focus is on
+          improving and developing my
+          skills that I use at work, but I'm always interested in trying new stuff out and learning more. I have many
+          side-projects and
+          ideas to realize and hopefully they will see the light soon, so stay tuned!
         </p>
       </div>
     </div>
-    <hr />
+    <hr/>
+
     <div class="row">
+      <div class="col-12">
+        <h3 class="paradise-pink mb-3"><b>My Skills</b></h3>
+      </div>
+    </div>
+
+    <div class="row mb-2">
       <div class="col-12">Here some languages, frameworks and technologies that I'm using:</div>
     </div>
 
     <div class="row">
       <div class="col-auto"><p class="pill">Javascript (ES6+)</p></div>
       <div class="col-auto"><p class="pill">Typescript</p></div>
-      <div class="col-auto"><p class="pill">CSS / SCSS</p></div>
-      <div class="col-auto"><p class="pill">AngularJs & Angular</p></div>
+      <div class="col-auto"><p class="pill">SCSS</p></div>
+      <div class="col-auto"><p class="pill">Angular</p></div>
       <div class="col-auto"><p class="pill">Node.js</p></div>
+      <div class="col-auto"><p class="pill">NgRx</p></div>
       <div class="col-auto"><p class="pill">RxJs</p></div>
       <div class="col-auto"><p class="pill">Bootstrap</p></div>
-      <div class="col-auto"><p class="pill">Java / Java EE</p></div>
+      <div class="col-auto"><p class="pill">Java EE</p></div>
       <div class="col-auto"><p class="pill">Spring</p></div>
       <div class="col-auto"><p class="pill">PostgreSQL</p></div>
+      <div class="col-auto"><p class="pill">Scrum</p></div>
+      <div class="col-auto"><p class="pill">Bootstrap</p></div>
     </div>
-    <hr />
+    <hr/>
+
     <div class="row">
       <div class="col-12">
-        I aspire to be a Game Developer and it has been a dream of mine since I've realized how games make people engaged and passionate,
+        <h3 class="paradise-pink mb-3"><b>What's Next</b></h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        I aspire to be a Game Developer and it has been a dream of mine since I've realized how games make people
+        engaged and passionate,
         and I always wanted to build something that would create that effect.
       </div>
     </div>
@@ -55,30 +77,48 @@
   <div class="col-12 col-md-10 col-lg-8 col-xxl-6 my-card card-text">
     <div class="row">
       <div class="col-12">
-        <h1 class="title-color mb-3"><b>Work</b></h1>
+        <h1 class="paradise-pink mb-3"><b>Work</b></h1>
       </div>
     </div>
+
     <div class="row">
       <div class="col-12">
         <app-accordion>
           <app-panel [title]="'Accenture'" id="accenture">
-            <p><u>February 2021</u> - <u>Present</u></p>
-            <p><span class="title-color">Role:</span> Junior Front End Developer</p>
+            <p>February 2021 - On Going</p>
+            <p><span class="paradise-pink">Junior Front End Developer</span></p>
             <ul>
-              <li>Develop and maintain a customer service platform for the italian post service</li>
-              <li>Work with many languages,</li>
-              <li>Agile Development</li>
+              <li>Developed and maintained a customer service platform for the italian post service</li>
+              <li>Worked in an Scrum team,applied its methodologies and participated actively in the project phases
+              </li>
+              <li>Technologies used: Angular, NgRx, RxJs, Javascript (ES6+), SCSS</li>
             </ul>
           </app-panel>
           <app-panel [title]="'JPanik'" id="jpanik">
             <p>January 2020 - February 2021</p>
+            <p><span class="paradise-pink">Junior Full Stack Developer</span></p>
+            <ul>
+              <li>Developed and maintained an enterprise web platform for clinical-hospital management</li>
+              <li>
+                Integrated and developed an application that analyzes, process and displays an interactive graph through
+                Chart.js library
+              </li>
+              <li>Technologies used: Angular/AngularJS, Java/Java EE, Spring, REST API, PostgreSQL, MongoDB, Jira</li>
+            </ul>
           </app-panel>
           <app-panel [title]="'University'">
             <p>September 2016 – April 2020</p>
-            <p>Sapienza University of Rome</p>
-            <p>Computer Science Degree</p>
+            <p><span class="paradise-pink">Sapienza University of Rome</span> - Computer Science</p>
+            <ul>
+              <li><span class="paradise-pink">E-Quality:</span>Developed a game to raise awareness
+                to children about gender equality, in collaboration with the Italian Regional Councilor for
+                Equal Opportunities</li>
+              <li><span class="paradise-pink">Curiosone Bot:</span> interactive chat bot written in Java during the
+                Programming Methodologies course</li>
+              <li><span class="paradise-pink">Airborne Assault:</span> developed a game integrated into Curiosone Bot using
+                the libGDX library</li>
+            </ul>
           </app-panel>
-          <app-panel [title]="'Certifications & Courses'"> </app-panel>
         </app-accordion>
       </div>
     </div>
@@ -89,9 +129,10 @@
   <div class="col-12 col-md-10 col-lg-8 col-xxl-6 my-card card-text">
     <div class="row">
       <div class="col-12">
-        <h1 class="title-color mb-3"><b>Projects</b></h1>
+        <h1 class="paradise-pink mb-3"><b>Projects</b></h1>
       </div>
     </div>
+
     <div class="row"></div>
   </div>
 </section>

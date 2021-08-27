@@ -5,7 +5,7 @@
   width: 100%;
   color: $cultured;
   background-color: $gunmetal;
-  border: 3px solid $paradise-pink;
+  border: 0;
 }
 
 .arrow {
@@ -14,35 +14,31 @@
   fill: $cultured
 }
 
-.accordion-btn-middle {
-
-  border-bottom: 3px solid $paradise-pink;
-
-  button {
-    @extend %button-common;
-    border-top: 0;
-    border-bottom: 0;
-  }
-
-  .button-opened {
-    border: 3px solid $paradise-pink;
-    border-top: 0;
-  }
-
-}
-
 .accordion-btn-first {
 
   border-bottom: 3px solid $paradise-pink;
 
   button {
     @extend %button-common;
-    border-bottom: 0;
     border-radius: $card-border-radius $card-border-radius 0 0;
   }
 
   .button-opened {
-    border: 3px solid $paradise-pink;
+    border-bottom: 3px solid $paradise-pink;
+  }
+
+}
+
+.accordion-btn-middle {
+
+  border-bottom: 3px solid $paradise-pink;
+
+  button {
+    @extend %button-common;
+  }
+
+  .button-opened {
+    border-bottom: 3px solid $paradise-pink;
   }
 
 }
@@ -51,24 +47,21 @@
 
   button {
     @extend %button-common;
-    border-top: 0;
     border-radius: 0 0 $card-border-radius $card-border-radius;
   }
 
   .button-opened {
-    border: 3px solid $paradise-pink;
-    border-top: 0;
+    border-bottom: 3px solid $paradise-pink;
     border-radius: 0;
   }
 
   .accordion-text {
-    border-bottom: 0;
+    border-radius: 0 0 $card-border-radius $card-border-radius;
   }
 
 }
 
 .accordion-text {
-  border-top: 5px solid $charcoal;
-  border-bottom: 5px solid $charcoal;
-  padding: 5px;
+  padding: 5px 10px 5px 10px;
+  background: $charcoal;
 }

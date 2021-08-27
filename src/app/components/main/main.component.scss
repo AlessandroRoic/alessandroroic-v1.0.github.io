@@ -1,9 +1,6 @@
 @import "../../../variables";
 @import "../../../styles/mixins";
-
-.title-color {
-  color: $paradise-pink;
-}
+@import "../../../styles/colors";
 
 .my-card {
   padding: 20px;
@@ -12,11 +9,12 @@
   border-radius: $card-border-radius;
 
   .side-photo {
-    margin-right: 10px;
-    margin-bottom: 10px;
+    border: 2px solid $charcoal;
+    margin-right: 15px;
+    margin-bottom: 15px;
     height: 168px;
     width: 150px;
-    box-shadow: 0 0 10px black;
+    box-shadow: $pink-shadow;
     border-radius: $card-border-radius;
   }
 
@@ -40,21 +38,15 @@
   text-decoration-style: dashed;
 }
 
-%pill-style {
+.pill {
   border-radius: $card-border-radius;
-  background: $silver;
+  background: $cultured;
   color: $gunmetal;
   margin-bottom: 10px;
-}
-
-.pill {
-  @extend %pill-style;
   padding: 5px;
-}
+  box-shadow: $pink-shadow;
+  border: 2px solid $charcoal;
 
-ul {
-  padding: 0;
-  margin: 0;
 }
 
 li::marker {
@@ -63,6 +55,5 @@ li::marker {
 }
 
 li {
-  @extend %pill-style;
-  list-style-position: inside;
+  padding-left: 5px;
 }
