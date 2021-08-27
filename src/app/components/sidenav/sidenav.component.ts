@@ -5,7 +5,7 @@ import { fadeInGrow, item } from '../../animations/fade-animations';
 import { closeSideNav } from '../../store/actions/sidenav.action';
 import { AppState } from '../../store/interfaces/app-state';
 import { getSideNavOpened } from '../../store/selectors/local-store.selector';
-import { overlayFade, sideNav, sideNavSlide } from '../../animations/slide-in-animation';
+import { overlayFade, sideNav, sideNavSlide } from '../../animations/slide-animations';
 
 @Component({
   selector: 'app-sidebar',
