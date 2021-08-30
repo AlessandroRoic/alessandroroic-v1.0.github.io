@@ -1,7 +1,7 @@
 import { AfterContentInit, Component, ContentChildren, OnDestroy, QueryList } from '@angular/core';
 import { Subscription } from 'rxjs';
 import AccordionPanelComponent from './panel/accordion-panel.component';
-import { PanelStyleEnum } from '../../enums/panel-style.enum';
+import { PanelStyleEnum } from '../../../enums/panel-style.enum';
 
 @Component({
   selector: 'app-accordion',

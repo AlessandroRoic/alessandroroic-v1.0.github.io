@@ -1,11 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { fadeInGrow, item } from '../../animations/fade-animations';
-import { closeSideNav } from '../../store/actions/sidenav.action';
-import { AppState } from '../../store/interfaces/app-state';
-import { getSideNavOpened } from '../../store/selectors/local-store.selector';
-import { overlayFade, sideNav, sideNavSlide } from '../../animations/slide-animations';
+import { closeSideNav } from 'src/app/store/actions/sidenav.action';
+import { fadeInGrow, item } from '../../../animations/fade-animations';
+import { overlayFade, sideNav, sideNavSlide } from '../../../animations/slide-animations';
+import { AppState } from '../../../store/interfaces/app-state';
+import { getSideNavOpened } from '../../../store/selectors/local-store.selector';
 
 @Component({
   selector: 'app-sidebar',
