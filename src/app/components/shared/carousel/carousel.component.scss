@@ -1,0 +1,11 @@
+@import "../../../../styles/mixins";
+
+.slide {
+  max-width:100%;
+  max-height:100%;
+}
+
+.arrow {
+  z-index: 1;
+  @include scaleSvg(32px);
+}

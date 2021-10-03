@@ -1,1 +1,13 @@
-<p>carousel works!</p>
+<div class="carousel-wrapper">
+  <ng-container *ngFor="let slide of slides; let idx = index">
+    <div *ngIf="idx === currentSlide">
+      <img [src]="slide" class="slide" alt="slide"/>
+      <svg class="arrow">
+        <use href="assets/icons/icons.svg#arrow-left"></use>
+      </svg>
+      <svg class="arrow">
+        <use href="assets/icons/icons.svg#arrow-right"></use>
+      </svg>
+    </div>
+  </ng-container>
+</div>
