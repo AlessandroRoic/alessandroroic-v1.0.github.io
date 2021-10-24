@@ -1,9 +1,9 @@
-import {Component, HostListener, OnDestroy, OnInit} from '@angular/core';
-import {Store} from '@ngrx/store';
-import {Subscription} from 'rxjs';
-import {openSideNav} from './store/actions/sidenav.action';
-import {AppState} from './store/interfaces/app-state';
-import {getSideNavOpened} from './store/selectors/local-store.selector';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Subscription } from 'rxjs';
+import { openSideNav } from './store/actions/sidenav.action';
+import { AppState } from './store/interfaces/app-state';
+import { getSideNavOpened } from './store/selectors/local-store.selector';
 import UtilsService from './services/utils.service';
 
 @Component({

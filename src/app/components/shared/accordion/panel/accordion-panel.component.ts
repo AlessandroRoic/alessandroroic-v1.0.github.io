@@ -1,5 +1,5 @@
-import {Component, EventEmitter, Input, Output, ViewEncapsulation} from '@angular/core';
-import {accordionSlide} from '../../../../animations/slide-animations';
+import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
+import { accordionSlide } from '../../../../animations/slide-animations';
 import rotateArrow from '../../../../animations/rotation-animations';
 
 @Component({
