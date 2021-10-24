@@ -1,22 +1,15 @@
 <div [className]="buttonClass">
   <button
     (click)="openAccordion()"
-    [className]="buttonClass"
-    [ngClass]="{ 'button-opened': opened }"
-    class="d-flex justify-content-between"
+    [ngClass]="{ 'accordion__button--opened': opened }"
+    class="accordion__button d-flex justify-content-between"
   >
     <span>{{ title }}</span>
-    <svg
-      [@rotateArrow]="opened ? 'open' : 'close'"
-      class="align-self-center arrow"
-      clip-rule="evenodd"
-      fill-rule="evenodd"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z" />
+    <svg [@rotateArrow]="opened ? 'open' : 'close'" class="align-self-center accordion__arrow">
+      <use href="assets/icons/icons.svg#accordion-arrow"></use>
     </svg>
   </button>
-  <div [@accordionSlide]="opened ? 'open' : 'close'" class="accordion-text">
+  <div [@accordionSlide]="opened ? 'open' : 'close'" class="accordion__text">
     <ng-content></ng-content>
   </div>
 </div>

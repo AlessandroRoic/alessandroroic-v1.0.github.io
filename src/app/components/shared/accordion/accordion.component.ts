@@ -1,7 +1,8 @@
-import { AfterContentInit, Component, ContentChildren, OnDestroy, QueryList } from '@angular/core';
-import { Subscription } from 'rxjs';
+import {AfterContentInit, Component, ContentChildren, OnDestroy, QueryList} from '@angular/core';
+import {Subject} from 'rxjs';
+import {takeUntil} from 'rxjs/operators';
 import AccordionPanelComponent from './panel/accordion-panel.component';
-import { PanelStyleEnum } from '../../../enums/panel-style.enum';
+import {PanelStyleEnum} from '../../../enums/panel-style.enum';
 
 @Component({
   selector: 'app-accordion',
@@ -11,9 +12,9 @@ import { PanelStyleEnum } from '../../../enums/panel-style.enum';
 export default class AccordionComponent implements AfterContentInit, OnDestroy {
   @ContentChildren(AccordionPanelComponent) panels: QueryList<AccordionPanelComponent>;
 
-  private subscriptions: Subscription[] = [];
+  private onDestroy$: Subject<void> = new Subject();
 
-  public ngAfterContentInit(): void {
+  ngAfterContentInit(): void {
     this.panels.map((panel: AccordionPanelComponent, index: number) => {
       const tempPanel = panel;
       if (index === 0) {
@@ -24,18 +25,16 @@ export default class AccordionComponent implements AfterContentInit, OnDestroy {
       } else {
         tempPanel.buttonClass = PanelStyleEnum.LAST;
       }
-      this.subscriptions = [
-        ...this.subscriptions,
-        tempPanel.toggle.subscribe(() => {
-          this.openPanel(index);
-        }),
-      ];
+      tempPanel.toggle.pipe(takeUntil(this.onDestroy$)).subscribe(() => {
+        this.openPanel(index);
+      });
       return tempPanel;
     });
   }
 
-  public ngOnDestroy(): void {
-    this.subscriptions.forEach((subscription: Subscription) => subscription.unsubscribe());
+  ngOnDestroy(): void {
+    this.onDestroy$.next();
+    this.onDestroy$.complete();
   }
 
   private openPanel(selectedIndex: number): void {

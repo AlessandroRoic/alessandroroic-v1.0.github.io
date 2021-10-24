@@ -2,28 +2,35 @@
 @import "../../../../styles/mixins";
 
 .arrow {
+  @include scaleSvg(40px);
   border-radius: 10%;
   border-style: solid;
   border-color: $paradise-pink;
   background-color: $gunmetal;
   box-shadow: 0 0 6px black;
-  @include scaleSvg(40px);
   display: flex;
   align-items: center;
   justify-content: center;
-}
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: 1rem;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
-.arrow:hover {
-  background-color: $charcoal
-}
+  &:hover {
+    background-color: $charcoal
+  }
 
-.arrow:active {
-  background-color: $charcoal;
-  transform: translateY(4px);
-}
+  &:active {
+    background-color: $charcoal;
+    transform: translateY(4px);
+  }
 
-.arrow-text {
-  @include scaleText(20px);
-  color: $paradise-pink;
-  transform: rotate(-90deg);
+  .arrow__icon {
+    @include scaleText(20px);
+    color: $paradise-pink;
+    transform: rotate(-90deg);
+  }
 }

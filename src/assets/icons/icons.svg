@@ -86,11 +86,18 @@
       d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
       fill-rule="evenodd"/>
   </symbol>
-  <symbol id="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-ChevronLeft"><path d="M15 4l-8 8 8 8"/></symbol>
+  <symbol class="ai ai-ArrowLeft" fill="none" id="arrow-left" stroke="currentColor" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M11 5l-7 7 7 7"/>
+    <path d="M4 12h16"/>
+  </symbol>
   <symbol id="arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
           class="ai ai-ArrowRight">
     <path d="M4 12h16"/>
     <path d="M13 5l7 7-7 7"/>
+  </symbol>
+  <symbol clip-rule="evenodd" fill-rule="evenodd" id="accordion-arrow" xmlns="http://www.w3.org/2000/svg">
+    <path d="M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z"/>
   </symbol>
 </svg>

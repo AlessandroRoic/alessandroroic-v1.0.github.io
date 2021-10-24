@@ -1,9 +1,9 @@
-import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { Subscription } from 'rxjs';
-import { openSideNav } from './store/actions/sidenav.action';
-import { AppState } from './store/interfaces/app-state';
-import { getSideNavOpened } from './store/selectors/local-store.selector';
+import {Component, HostListener, OnDestroy, OnInit} from '@angular/core';
+import {Store} from '@ngrx/store';
+import {Subscription} from 'rxjs';
+import {openSideNav} from './store/actions/sidenav.action';
+import {AppState} from './store/interfaces/app-state';
+import {getSideNavOpened} from './store/selectors/local-store.selector';
 import UtilsService from './services/utils.service';
 
 @Component({
@@ -12,17 +12,17 @@ import UtilsService from './services/utils.service';
   styleUrls: ['./app.component.scss'],
 })
 export default class AppComponent implements OnInit, OnDestroy {
-  public isScrolled: boolean;
+  isScrolled: boolean;
 
-  public title = 'Alessandro Roic';
+  title = 'Alessandro Roic';
 
-  public sideNavOpened: boolean;
+  sideNavOpened: boolean;
 
   private subs: Subscription[] = [];
 
   constructor(private store$: Store<AppState>, private utils: UtilsService) {}
 
-  public ngOnInit(): void {
+  ngOnInit(): void {
     this.subs = [
       ...this.subs,
       this.store$.select(getSideNavOpened).subscribe((sideNavOpened: boolean) => {
@@ -31,20 +31,20 @@ export default class AppComponent implements OnInit, OnDestroy {
     ];
   }
 
-  public ngOnDestroy(): void {
+  ngOnDestroy(): void {
     this.subs.forEach((s: Subscription) => s.unsubscribe());
   }
 
-  public reloadPage(): void {
+  reloadPage(): void {
     this.utils.reloadPage();
   }
 
-  public showSideNav(): void {
+  showSideNav(): void {
     this.store$.dispatch(openSideNav());
   }
 
   @HostListener('window:scroll', [])
-  public onScrollActivateArrow(): void {
+  onScrollActivateArrow(): void {
     const scrollLength: number = window.pageYOffset || document.documentElement.scrollTop;
     this.isScrolled = scrollLength > 50;
   }

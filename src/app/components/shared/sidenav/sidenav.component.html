@@ -1,4 +1,4 @@
-<div @sideNav class="container-fluid d-flex flex-column side-nav p-0">
+<div @sideNav class="side-nav container-fluid d-flex flex-column p-0">
   <div class="row vh-100 m-0">
     <div class="col-7 col-md-10 col-lg-9 col-xl-10" (click)="closeSideNav()"></div>
 
@@ -7,7 +7,7 @@
         <div class="row mt-4">
           <div class="col-2">
             <div (click)="closeSideNav()">
-              <svg class="close-button">
+              <svg class="menu__close-button">
                 <use href="assets/icons/icons.svg#close-sidenav"></use>
               </svg>
             </div>
@@ -17,8 +17,8 @@
         <div class="row mt-5">
           <div class="col-12 text-center">
             <div @fadeInGrow>
-              <div class="mb-3" @item><a class="menu-text" href="#about" (click)="closeSideNav()">ABOUT</a></div>
-              <div class="mb-3" @item><a class="menu-text" href="#work" (click)="closeSideNav()">WORK</a></div>
+              <div @item class="mb-3"><a (click)="closeSideNav()" class="menu__text" href="#about">ABOUT</a></div>
+              <div @item class="mb-3"><a (click)="closeSideNav()" class="menu__text" href="#work">WORK</a></div>
             </div>
           </div>
         </div>

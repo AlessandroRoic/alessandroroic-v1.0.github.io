@@ -1,16 +1,19 @@
 @import "../../../../variables";
 @import "../../../../styles/mixins";
 
-.social-icon {
-  fill: $cultured;
-  @include scaleSvg(32px)
-}
+.social {
+  &__icon {
+    fill: $cultured;
+    @include scaleSvg(32px);
 
-.social-icon:hover {
-  fill: $paradise-pink;
-}
+    &:hover {
+      fill: $paradise-pink;
+    }
+  }
 
-.social-button {
-  border: none;
-  background: none;
+  &__button {
+    border: none;
+    background: none;
+  }
+
 }

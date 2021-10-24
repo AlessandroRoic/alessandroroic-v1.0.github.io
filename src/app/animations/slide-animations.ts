@@ -1,4 +1,4 @@
-import { animate, animateChild, group, query, sequence, state, style, transition, trigger } from '@angular/animations';
+import {animate, animateChild, group, query, sequence, state, style, transition, trigger} from '@angular/animations';
 
 export const sideNavSlide = trigger('sideNavSlide', [
   transition(':enter', [

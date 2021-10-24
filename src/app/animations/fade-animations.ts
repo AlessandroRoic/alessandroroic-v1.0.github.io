@@ -1,4 +1,4 @@
-import { animate, animateChild, query, stagger, style, transition, trigger } from '@angular/animations';
+import {animate, animateChild, query, stagger, style, transition, trigger} from '@angular/animations';
 
 export const fadeInGrow = trigger('fadeInGrow', [
   transition(':enter', [query('@item', [stagger(150, animateChild())], { optional: true })]),

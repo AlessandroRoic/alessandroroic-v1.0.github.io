@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { accordionSlide } from '../../../../animations/slide-animations';
+import {Component, EventEmitter, Input, Output, ViewEncapsulation} from '@angular/core';
+import {accordionSlide} from '../../../../animations/slide-animations';
 import rotateArrow from '../../../../animations/rotation-animations';
 
 @Component({
@@ -7,6 +7,7 @@ import rotateArrow from '../../../../animations/rotation-animations';
   templateUrl: './accordion-panel.component.html',
   styleUrls: ['./accordion-panel.component.scss'],
   animations: [accordionSlide, rotateArrow],
+  encapsulation: ViewEncapsulation.None,
 })
 export default class AccordionPanelComponent {
   @Input() title: string;
@@ -15,9 +16,9 @@ export default class AccordionPanelComponent {
 
   @Output() toggle: EventEmitter<void> = new EventEmitter<void>();
 
-  public buttonClass: string;
+  buttonClass: string;
 
-  public openAccordion(): void {
+  openAccordion(): void {
     this.toggle.emit();
   }
 }

@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import UtilsService from '../../../services/utils.service';
-import { fadeInGrow, item } from '../../../animations/fade-animations';
+import {fadeInGrow, item} from '../../../animations/fade-animations';
 
 @Component({
   selector: 'app-social-medias',
@@ -13,7 +13,7 @@ export default class SocialMediasComponent {
 
   constructor(private utils: UtilsService) {}
 
-  public openSite(siteUrl: string): void {
+  openSite(siteUrl: string): void {
     this.utils.openSite(siteUrl);
   }
 }

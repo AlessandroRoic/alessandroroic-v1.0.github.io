@@ -1,7 +1,7 @@
 <app-sidebar *ngIf="sideNavOpened"></app-sidebar>
 
 <div class="container-fluid">
-  <nav class="navbar fixed-top p-0" [ngClass]="{ 'nav-scrolled': isScrolled }">
+  <nav [ngClass]="{ 'navbar-scrolled': isScrolled }" class="navbar fixed-top p-0">
     <svg (click)="reloadPage()" class="navbar-toggler logo">
       <use href="assets/icons/icons.svg#site-logo"></use>
     </svg>
@@ -14,7 +14,7 @@
 
   <app-main></app-main>
 
-  <footer class="row text-center py-2">
+  <footer class="row footer text-center py-2">
     <div class="col-12">
       <app-social-medias [isFooter]="true"></app-social-medias>
       <div class="row mt-1">

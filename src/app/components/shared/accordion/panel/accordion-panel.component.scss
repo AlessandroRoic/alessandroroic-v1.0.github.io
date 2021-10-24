@@ -1,67 +1,66 @@
 @import "../../../../../variables";
 
+.accordion {
 
-%button-common {
-  width: 100%;
-  color: $cultured;
-  background-color: $gunmetal;
-  border: 0;
-}
-
-.arrow {
-  height: 24px;
-  width: 24px;
-  fill: $cultured
-}
-
-.accordion-btn-first {
-
-  border-bottom: 3px solid $paradise-pink;
-
-  button {
-    @extend %button-common;
-    border-radius: $card-border-radius $card-border-radius 0 0;
+  &__button {
+    width: 100%;
+    color: $cultured;
+    background-color: $gunmetal;
+    border: 0;
   }
 
-  .button-opened {
+  &__button--opened {
     border-bottom: 3px solid $paradise-pink;
   }
 
-}
+  &--first {
 
-.accordion-btn-middle {
+    border-bottom: 3px solid $paradise-pink;
 
-  border-bottom: 3px solid $paradise-pink;
-
-  button {
-    @extend %button-common;
+    .accordion__button {
+      border-radius: $card-border-radius $card-border-radius 0 0;
+    }
   }
 
-  .button-opened {
+  &--middle {
     border-bottom: 3px solid $paradise-pink;
   }
 
-}
+  &--last {
 
-.accordion-btn-last {
+    .accordion__button {
+      border-radius: 0 0 $card-border-radius $card-border-radius;
+    }
 
-  button {
-    @extend %button-common;
-    border-radius: 0 0 $card-border-radius $card-border-radius;
+    .accordion__button--opened {
+      border-bottom: 3px solid $paradise-pink;
+      border-radius: 0;
+    }
+
+    .accordion__text {
+      border-radius: 0 0 $card-border-radius $card-border-radius;
+    }
+
   }
 
-  .button-opened {
-    border-bottom: 3px solid $paradise-pink;
-    border-radius: 0;
+  &__arrow {
+    height: 24px;
+    width: 24px;
+    fill: $cultured
   }
 
-  .accordion-text {
-    border-radius: 0 0 $card-border-radius $card-border-radius;
+  &__text {
+    padding: 5px 10px 5px 10px;
+    background: $charcoal;
+
+    .accordion__list-item::marker {
+      color: $paradise-pink !important;
+      content: "●"!important;
+    }
+
+    .accordion__list-item {
+      padding-left: 5px;
+    }
   }
 
-}
-
-.accordion-text {
-  padding: 5px 10px 5px 10px;
-  background: $charcoal;
 }

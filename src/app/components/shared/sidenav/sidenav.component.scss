@@ -13,26 +13,26 @@
   .menu {
     background: $charcoal;
 
-    .menu-text {
+    &__text {
       color: $cultured;
       font-weight: bold;
       @include scaleText(25px);
       text-decoration: underline;
       text-decoration-color: $paradise-pink;
+
+      &:hover {
+        color: $paradise-pink;
+        text-decoration-color: $cultured;
+      }
     }
 
-    .menu-text:hover {
-      color: $paradise-pink;
-      text-decoration-color: $cultured;
-    }
-
-    .close-button {
+    &__close-button {
       @include scaleSvg(32px);
-      fill: $cultured
-    }
+      fill: $cultured;
 
-    .close-button:hover {
-      fill: $paradise-pink;
+      &:hover {
+        fill: $paradise-pink;
+      }
     }
   }
 }
