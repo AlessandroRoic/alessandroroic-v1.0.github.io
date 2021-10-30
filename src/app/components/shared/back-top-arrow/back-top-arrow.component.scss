@@ -2,12 +2,8 @@
 @import "../../../../styles/mixins";
 
 .arrow {
-  @include scaleSvg(40px);
-  border-radius: 10%;
-  border-style: solid;
-  border-color: $paradise-pink;
-  background-color: $gunmetal;
-  box-shadow: 0 0 6px black;
+  @include scaleSvg(50px);
+  color: $paradise-pink;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,17 +16,10 @@
   left: 0;
 
   &:hover {
-    background-color: $charcoal
+
   }
 
   &:active {
-    background-color: $charcoal;
     transform: translateY(4px);
-  }
-
-  .arrow__icon {
-    @include scaleText(20px);
-    color: $paradise-pink;
-    transform: rotate(-90deg);
   }
 }

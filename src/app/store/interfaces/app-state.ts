@@ -1,5 +1,5 @@
-import {LocalStore} from './local-store';
+import {UIStore} from './ui-store';
 
 export interface AppState {
-  localStore: LocalStore;
+  UIStore: UIStore;
 }

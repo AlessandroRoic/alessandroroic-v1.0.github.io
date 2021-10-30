@@ -1,5 +1,5 @@
-import {localStoreReducer} from './reducers/local-store.reducer';
+import {UIStoreReducer} from './reducers/ui-store.reducer';
 
 export const reducers = {
-  localStore: localStoreReducer,
+  UIStore: UIStoreReducer,
 };

@@ -13,6 +13,7 @@ import AccordionComponent from './components/shared/accordion/accordion.componen
 import BackTopArrowComponent from './components/shared/back-top-arrow/back-top-arrow.component';
 import AccordionPanelComponent from './components/shared/accordion/panel/accordion-panel.component';
 import CarouselComponent from './components/shared/carousel/carousel.component';
+import NavbarComponent from './components/shared/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import CarouselComponent from './components/shared/carousel/carousel.component';
     BackTopArrowComponent,
     AccordionPanelComponent,
     CarouselComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

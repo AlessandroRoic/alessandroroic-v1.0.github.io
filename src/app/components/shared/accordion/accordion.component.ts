@@ -1,8 +1,8 @@
-import {AfterContentInit, Component, ContentChildren, OnDestroy, QueryList} from '@angular/core';
-import {Subject} from 'rxjs';
-import {takeUntil} from 'rxjs/operators';
+import { AfterContentInit, Component, ContentChildren, OnDestroy, QueryList } from '@angular/core';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 import AccordionPanelComponent from './panel/accordion-panel.component';
-import {PanelStyleEnum} from '../../../enums/panel-style.enum';
+import { PanelStyleEnum } from '../../../enums/panel-style.enum';
 
 @Component({
   selector: 'app-accordion',

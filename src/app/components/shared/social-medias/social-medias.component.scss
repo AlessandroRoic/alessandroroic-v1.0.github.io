@@ -4,10 +4,12 @@
 .social {
   &__icon {
     fill: $cultured;
+    color: $cultured;
     @include scaleSvg(32px);
 
     &:hover {
       fill: $paradise-pink;
+      color: $paradise-pink;
     }
   }
 

@@ -1,36 +1,40 @@
 <section class="row align-items-center justify-content-center g-0 vh-100" id="intro">
-  <div class="col-12 col-md-10 col-lg-8 col-xxl-6 card">
+  <header class="col-12 col-md-10 col-lg-8 col-xxl-6 card">
     <svg viewBox="0 0 169 60">
       <use href="assets/icons/icons.svg#welcome-card"></use>
     </svg>
-  </div>
+  </header>
 </section>
 
 <section class="row align-items-center justify-content-center g-0 section--first" id="about">
-  <div class="col-12 col-md-10 col-lg-8 col-xxl-6 card">
-    <div class="row">
+  <article class="col-12 col-md-10 col-lg-8 col-xxl-6 card">
+    <header class="row">
       <div class="col-12">
-        <div class="h1 paradise-pink mb-3"><b>About Me</b></div>
+        <h1 class="paradise-pink mb-3"><b>About Me</b></h1>
       </div>
-    </div>
+    </header>
 
     <div class="row card__text">
       <div class="col-12">
-        <img alt="profile" class="card__side-photo float-start" src="../../../../assets/profile.avif" />
-        <p>
+        <img
+          alt="profile"
+          class="card__side-photo d-block float-none float-md-start me-auto ms-auto mb-3 mb-md-4 mt-md-4 me-md-4"
+          src="../../../../assets/images/profile.avif"
+        />
+        <div>
           Hi, I'm Alessandro and as you read before in the giant sign above I'm a Front End Developer. I've worked in a
           <a class="card__link" href="#jpanik">small software business</a> and currently working in a
           <a class="card__link" href="#accenture">major consulting multinational</a>. Right now my focus is on improving and developing my
           skills that I use at work, but I'm always interested in trying new stuff out and learning more. I have many side-projects and
           ideas to realize and hopefully they will see the light soon, so stay tuned!
-        </p>
+        </div>
       </div>
     </div>
     <hr />
 
     <div class="row">
       <div class="col-12">
-        <div class="h2 paradise-pink mb-3"><b>My Skills</b></div>
+        <h2 class="paradise-pink mb-3"><b>My Skills</b></h2>
       </div>
     </div>
 
@@ -38,7 +42,7 @@
       <div class="col-12">Here some languages, frameworks and technologies that I'm using:</div>
     </div>
 
-    <div class="row card__text">
+    <div class="row card__text justify-content-between justify-content-md-start">
       <div *ngFor="let pill of pills" class="col-auto">
         <p class="card__pill">
           {{ pill }}
@@ -49,7 +53,7 @@
 
     <div class="row">
       <div class="col-12">
-        <div class="h2 paradise-pink mb-3"><b>What's Next</b></div>
+        <h2 class="paradise-pink mb-3"><b>What's Next</b></h2>
       </div>
     </div>
 
@@ -59,23 +63,23 @@
         and I always wanted to build something that would create that effect.
       </div>
     </div>
-  </div>
+  </article>
 </section>
 
 <section class="row align-items-center justify-content-center g-0 section" id="work">
-  <div class="col-12 col-md-10 col-lg-8 col-xxl-6 card">
-    <div class="row">
+  <article class="col-12 col-md-10 col-lg-8 col-xxl-6 card">
+    <header class="row">
       <div class="col-12">
-        <div class="h1 paradise-pink mb-3"><b>Work</b></div>
+        <h1 class="paradise-pink mb-3"><b>Work</b></h1>
       </div>
-    </div>
+    </header>
 
     <div class="row card__text">
       <div class="col-12">
         <app-accordion>
           <app-panel [title]="'Accenture'" id="accenture">
             <p>February 2021 - On Going</p>
-            <p class="paradise-pink">Junior Front End Developer</p>
+            <p class="accordion__title paradise-pink">Junior Front End Developer</p>
             <ul>
               <li class="accordion__list-item">Developed and maintained a customer service platform for the italian post service</li>
               <li class="accordion__list-item">
@@ -86,7 +90,7 @@
           </app-panel>
           <app-panel [title]="'JPanik'" id="jpanik">
             <p>January 2020 - February 2021</p>
-            <p class="paradise-pink">Junior Full Stack Developer</p>
+            <p class="accordion__title paradise-pink">Junior Full Stack Developer</p>
             <ul>
               <li class="accordion__list-item">Developed and maintained an enterprise web platform for clinical-hospital management</li>
               <li class="accordion__list-item">
@@ -99,7 +103,7 @@
           </app-panel>
           <app-panel [title]="'University'">
             <p>September 2016 – April 2020</p>
-            <p><span class="paradise-pink">Sapienza University of Rome</span> - Computer Science</p>
+            <p class="accordion__title"><span class="paradise-pink">Sapienza University of Rome</span> - Computer Science</p>
             <ul>
               <li class="accordion__list-item">
                 <span class="paradise-pink"><u>E-Quality</u></span
@@ -119,18 +123,20 @@
         </app-accordion>
       </div>
     </div>
-  </div>
+  </article>
 </section>
 
 <section class="row align-items-center justify-content-center g-0 section" id="projects">
-  <div class="col-12 col-md-10 col-lg-8 col-xxl-6 card">
+  <article class="col-12 col-md-10 col-lg-8 col-xxl-6 card">
+    <header class="row">
+      <div class="col-12">
+        <h1 class="paradise-pink mb-3"><b>Projects</b></h1>
+      </div>
+    </header>
     <div class="row">
       <div class="col-12">
-        <div class="h1 paradise-pink mb-3"><b>Projects</b></div>
+        <app-carousel [slides]="slides"></app-carousel>
       </div>
     </div>
-    <div class="row">
-      <app-carousel [slides]="slides"></app-carousel>
-    </div>
-  </div>
+  </article>
 </section>

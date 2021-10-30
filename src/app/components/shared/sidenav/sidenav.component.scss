@@ -28,10 +28,10 @@
 
     &__close-button {
       @include scaleSvg(32px);
-      fill: $cultured;
+      color: $cultured;
 
       &:hover {
-        fill: $paradise-pink;
+        color: $paradise-pink;
       }
     }
   }

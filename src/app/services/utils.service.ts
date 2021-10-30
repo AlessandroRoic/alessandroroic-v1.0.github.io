@@ -5,11 +5,11 @@ import {Injectable} from '@angular/core';
 })
 export default class UtilsService {
 
-  public reloadPage(): void {
+  reloadPage(): void {
     window.location.reload();
   }
 
-  public openSite(siteUrl: string): void {
+  openSite(siteUrl: string): void {
     window.open(`https://${siteUrl}`, '_blank');
   }
 }

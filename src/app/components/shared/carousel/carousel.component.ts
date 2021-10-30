@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import UtilsService from '../../../services/utils.service';
 
 @Component({
@@ -6,14 +6,12 @@ import UtilsService from '../../../services/utils.service';
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss'],
 })
-export default class CarouselComponent implements OnInit {
+export default class CarouselComponent {
   @Input() slides: string[];
 
-  public currentSlide = 0;
+  currentSlide = 0;
 
   constructor(private utils: UtilsService) {}
-
-  ngOnInit(): void {}
 
   openSite(url: string): void {
     this.utils.openSite(url);

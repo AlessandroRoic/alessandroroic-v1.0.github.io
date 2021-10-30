@@ -1,11 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Subject } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { closeSideNav } from 'src/app/store/actions/sidenav.action';
+import { takeUntil } from 'rxjs/operators';
 import { fadeInGrow, item } from '../../../animations/fade-animations';
 import { overlayFade, sideNav, sideNavSlide } from '../../../animations/slide-animations';
 import { AppState } from '../../../store/interfaces/app-state';
-import { getSideNavOpened } from '../../../store/selectors/local-store.selector';
+import { getSideNavOpened } from '../../../store/selectors/ui-store.selector';
 
 @Component({
   selector: 'app-sidebar',
@@ -16,21 +17,22 @@ import { getSideNavOpened } from '../../../store/selectors/local-store.selector'
 export default class SidenavComponent implements OnInit, OnDestroy {
   sideNavOpened: boolean;
 
-  private subs: Subscription[] = [];
+  private onDestroy$: Subject<void> = new Subject<void>();
 
   constructor(private store$: Store<AppState>) {}
 
   ngOnInit(): void {
-    this.subs = [
-      ...this.subs,
-      this.store$.select(getSideNavOpened).subscribe((sideNavOpened: boolean) => {
+    this.store$
+      .select(getSideNavOpened)
+      .pipe(takeUntil(this.onDestroy$))
+      .subscribe((sideNavOpened: boolean) => {
         this.sideNavOpened = sideNavOpened;
-      }),
-    ];
+      });
   }
 
   ngOnDestroy(): void {
-    this.subs.forEach((s: Subscription) => s.unsubscribe());
+    this.onDestroy$.next();
+    this.onDestroy$.complete();
   }
 
   closeSideNav(): void {

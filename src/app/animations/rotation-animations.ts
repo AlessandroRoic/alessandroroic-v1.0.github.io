@@ -1,4 +1,4 @@
-import {animate, state, style, transition, trigger} from '@angular/animations';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 const rotateArrow = trigger('rotateArrow', [
   state('open', style({ transform: 'rotate(-180deg)' })),

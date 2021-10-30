@@ -1,8 +1,8 @@
 import {Action, createReducer, on} from '@ngrx/store';
 import {closeSideNav, openSideNav} from '../actions/sidenav.action';
-import {LocalStore} from '../interfaces/local-store';
+import {UIStore} from '../interfaces/ui-store';
 
-const initialState: LocalStore = {
+const initialState: UIStore = {
   sideNavOpened: false,
 };
 
@@ -18,6 +18,6 @@ const sideBarReducer = createReducer(
   })),
 );
 
-export function localStoreReducer(state: LocalStore = initialState, action: Action): LocalStore {
+export function UIStoreReducer(state: UIStore = initialState, action: Action): UIStore {
   return sideBarReducer(state, action);
 }

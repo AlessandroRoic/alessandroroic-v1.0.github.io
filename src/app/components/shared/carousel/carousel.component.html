@@ -1,12 +1,12 @@
-<div class="carousel-wrapper">
+<div class="carousel">
   <ng-container *ngFor="let slide of slides; let idx = index">
     <div *ngIf="idx === currentSlide">
-      <img [src]="slide" class="slide" alt="slide"/>
-      <svg class="arrow">
-        <use href="assets/icons/icons.svg#arrow-left"></use>
+      <img [src]="slide" class="carousel__image" alt="slide" />
+      <svg class="carousel__arrow-left">
+        <use href="assets/icons/icons.svg#chevron-left"></use>
       </svg>
-      <svg class="arrow">
-        <use href="assets/icons/icons.svg#arrow-right"></use>
+      <svg class="carousel__arrow-right">
+        <use href="assets/icons/icons.svg#chevron-right"></use>
       </svg>
     </div>
   </ng-container>
