@@ -1,30 +1,38 @@
 @import "../../../../../variables";
 @import "../../../../../styles/mixins";
 
+%button-base {
+  width: 100%;
+  color: $cultured;
+  border: 3px solid $paradise-pink;
+  background-color: rgba(17, 20, 23, 0.1);
+  padding: 10px 15px 10px 15px;
+  position: relative;
+  z-index: 1;
+}
+
 .accordion {
 
   &__button {
-    width: 100%;
-    color: $cultured;
-    background-color: $gunmetal;
-    border: 0;
-  }
+    @extend %button-base;
 
-  &__button--opened {
-    border-bottom: 3px solid $paradise-pink;
+    &--opened {
+      @extend %button-base;
+      box-shadow: 0 0 0 3px rgba(238, 238, 238, 0.5);
+    }
   }
 
   &--first {
-
-    border-bottom: 3px solid $paradise-pink;
-
-    .accordion__button {
+    .accordion__button, .accordion__button--opened {
       border-radius: $card-border-radius $card-border-radius 0 0;
     }
   }
 
   &--middle {
-    border-bottom: 3px solid $paradise-pink;
+
+    .accordion__button {
+      border-bottom: 0;
+    }
   }
 
   &--last {
@@ -34,14 +42,20 @@
     }
 
     .accordion__button--opened {
-      border-bottom: 3px solid $paradise-pink;
       border-radius: 0;
     }
 
-    .accordion__text {
+    .accordion__content {
       border-radius: 0 0 $card-border-radius $card-border-radius;
     }
 
+    .accordion__button--opened + .accordion__content {
+      border-bottom: 3px solid $paradise-pink;
+    }
+  }
+
+  &__outer-title {
+    font-weight: 500;
   }
 
   &__arrow {
@@ -49,9 +63,11 @@
     fill: $cultured
   }
 
-  &__text {
+  &__content {
     padding: 5px 10px 5px 10px;
-    background: $charcoal;
+    background: rgba(58, 71, 80, 0.5);
+    border-right: 3px solid $paradise-pink;
+    border-left: 3px solid $paradise-pink;
     @include scaleText(15px);
 
     .accordion__list-item::marker {
@@ -64,9 +80,12 @@
     }
   }
 
-  &__title {
+  &__inner-title {
     font-weight: 600;
     font-style: italic;
   }
 
+  .accordion__button + .accordion__content {
+    padding: 0;
+  }
 }

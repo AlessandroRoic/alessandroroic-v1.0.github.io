@@ -47,10 +47,6 @@ export const accordionSlide = trigger('accordionSlide', [
     'close',
     style({
       height: 0,
-      opacity: 0,
-      padding: 0,
-      'border-top': 0,
-      'border-bottom': 0,
       overflow: 'hidden',
     }),
   ),

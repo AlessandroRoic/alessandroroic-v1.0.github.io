@@ -1,15 +1,15 @@
 <div [className]="buttonClass">
   <button
     (click)="openAccordion()"
-    [ngClass]="{ 'accordion__button--opened': opened }"
-    class="accordion__button d-flex justify-content-between"
+    [ngClass]="opened ? 'accordion__button--opened' : 'accordion__button'"
+    class="d-flex justify-content-between"
   >
-    <span>{{ title }}</span>
+    <span class="accordion__outer-title">{{ title }}</span>
     <svg [@rotateArrow]="opened ? 'open' : 'close'" class="align-self-center accordion__arrow">
       <use href="assets/icons/icons.svg#chevron-up"></use>
     </svg>
   </button>
-  <div [@accordionSlide]="opened ? 'open' : 'close'" class="accordion__text">
+  <div [@accordionSlide]="opened ? 'open' : 'close'" class="accordion__content">
     <ng-content></ng-content>
   </div>
 </div>
