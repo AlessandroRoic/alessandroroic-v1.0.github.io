@@ -22,7 +22,7 @@
           <use fill="#eeeeee" fill-opacity="1" href="#e1Ztn7UdIo" opacity="1"></use>
         </g>
         <g>
-          <use fill="#e08ec1" fill-opacity="0" href="#b9g5gzEfKn" opacity="1"></use>
+          <use fill="#F64E4D" fill-opacity="0" href="#b9g5gzEfKn" opacity="1"></use>
           <g>
             <use fill-opacity="0" href="#b9g5gzEfKn" opacity="1" stroke="#000000" stroke-opacity="0"
                  stroke-width="1"></use>
@@ -32,7 +32,7 @@
           <g></g>
           <use fill="#298929" fill-opacity="0" href="#a16YCI00i1" opacity="1"></use>
           <g>
-            <use fill-opacity="0" href="#a16YCI00i1" opacity="1" stroke="#e84a5f" stroke-opacity="1"
+            <use fill-opacity="0" href="#a16YCI00i1" opacity="1" stroke="#F64E4D" stroke-opacity="1"
                  stroke-width="2"></use>
           </g>
         </g>
@@ -54,7 +54,7 @@
     <text x="0" y="35">
       This is
     </text>
-    <text fill="#e84a5f" text-decoration="underline" x="50" y="35">
+    <text fill="#F64E4D" text-decoration="underline" x="50" y="35">
       Alessandro Roic
     </text>
     <text x="0" y="55">
@@ -63,11 +63,9 @@
   </symbol>
   <symbol id="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
           stroke-linejoin="round">
+    <circle cx="12" cy="7" r="5"/>
     <path
-      d="M4 4v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.342a2 2 0 0 0-.602-1.43l-4.44-4.342A2 2 0 0 0 13.56 2H6a2 2 0 0 0-2 2z"/>
-    <path d="M9 13h6"/>
-    <path d="M9 17h3"/>
-    <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+      d="M17 14h.352a3 3 0 0 1 2.976 2.628l.391 3.124A2 2 0 0 1 18.734 22H5.266a2 2 0 0 1-1.985-2.248l.39-3.124A3 3 0 0 1 6.649 14H7"/>
   </symbol>
   <symbol id="email" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
           stroke-linejoin="round">
@@ -76,12 +74,15 @@
     <path d="M16 8v4c0 1 .6 3 3 3s3-2 3-3"/>
   </symbol>
   <symbol id="github" viewBox="0 0 24 24">
-    <path
-      d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 6c-3.313 0-6 2.686-6 6 0 2.651 1.719 4.9 4.104 5.693.3.056.396-.13.396-.289v-1.117c-1.669.363-2.017-.707-2.017-.707-.272-.693-.666-.878-.666-.878-.544-.373.041-.365.041-.365.603.042.92.619.92.619.535.917 1.403.652 1.746.499.054-.388.209-.652.381-.802-1.333-.152-2.733-.667-2.733-2.965 0-.655.234-1.19.618-1.61-.062-.153-.268-.764.058-1.59 0 0 .504-.161 1.65.615.479-.133.992-.199 1.502-.202.51.002 1.023.069 1.503.202 1.146-.776 1.648-.615 1.648-.615.327.826.121 1.437.06 1.588.385.42.617.955.617 1.61 0 2.305-1.404 2.812-2.74 2.96.216.186.412.551.412 1.111v1.646c0 .16.096.347.4.288 2.383-.793 4.1-3.041 4.1-5.691 0-3.314-2.687-6-6-6z"/>
+    <path fill="currentColor"
+          d="M16.24 22a1 1 0 0 1-1-1v-2.6a2.15 2.15 0 0 0-.54-1.66a1 1 0 0 1 .61-1.67C17.75 14.78 20 14 20 9.77a4 4 0 0 0-.67-2.22a2.75 2.75 0 0 1-.41-2.06a3.71 3.71 0 0 0 0-1.41a7.65 7.65 0 0 0-2.09 1.09a1 1 0 0 1-.84.15a10.15 10.15 0 0 0-5.52 0a1 1 0 0 1-.84-.15a7.4 7.4 0 0 0-2.11-1.09a3.52 3.52 0 0 0 0 1.41a2.84 2.84 0 0 1-.43 2.08a4.07 4.07 0 0 0-.67 2.23c0 3.89 1.88 4.93 4.7 5.29a1 1 0 0 1 .82.66a1 1 0 0 1-.21 1a2.06 2.06 0 0 0-.55 1.56V21a1 1 0 0 1-2 0v-.57a6 6 0 0 1-5.27-2.09a3.9 3.9 0 0 0-1.16-.88a1 1 0 1 1 .5-1.94a4.93 4.93 0 0 1 2 1.36c1 1 2 1.88 3.9 1.52a3.89 3.89 0 0 1 .23-1.58c-2.06-.52-5-2-5-7a6 6 0 0 1 1-3.33a.85.85 0 0 0 .13-.62a5.69 5.69 0 0 1 .33-3.21a1 1 0 0 1 .63-.57c.34-.1 1.56-.3 3.87 1.2a12.16 12.16 0 0 1 5.69 0c2.31-1.5 3.53-1.31 3.86-1.2a1 1 0 0 1 .63.57a5.71 5.71 0 0 1 .33 3.22a.75.75 0 0 0 .11.57a6 6 0 0 1 1 3.34c0 5.07-2.92 6.54-5 7a4.28 4.28 0 0 1 .22 1.67V21a1 1 0 0 1-.94 1z"/>
   </symbol>
-  <symbol id="linkedin" viewBox="0 0 24 24">
-    <path
-      d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 8c0 .557-.447 1.008-1 1.008s-1-.45-1-1.008c0-.557.447-1.008 1-1.008s1 .452 1 1.008zm0 2h-2v6h2v-6zm3 0h-2v6h2v-2.861c0-1.722 2.002-1.881 2.002 0v2.861h1.998v-3.359c0-3.284-3.128-3.164-4-1.548v-1.093z"/>
+  <symbol id="linkedin" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+      <path d="M2 9h4v12H2z"/>
+      <circle cx="4" cy="4" r="2"/>
+    </g>
   </symbol>
   <symbol id="chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
           stroke-linecap="round"
@@ -99,7 +100,7 @@
   </symbol>
   <symbol id="arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
           stroke-linejoin="round">
-    <circle cx="12" cy="12" r="9" fill="#303841"/>
+    <rect x="3" y="3" width="18" height="18" rx="3" fill="#3F3E3D"/>
     <path d="M8 13.5l4-4 4 4" stroke="#eeeeee"/>
   </symbol>
   <symbol id="menu-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
