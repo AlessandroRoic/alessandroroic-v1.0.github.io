@@ -1,29 +1,29 @@
 @import "../../../../variables";
 @import "../../../../styles/mixins";
 
-.navbar-scrolled {
-  box-shadow: 1px 4px 14px 0 rgba(0, 0, 0, 0.69);
-  background-color: $gunmetal;
-}
+.navbar {
+  padding: 10px !important;
 
-.logo {
-  @include scaleSvg(90px);
-
-  &:hover {
-    opacity: 0.75;
+  &-scrolled {
+    box-shadow: 1px 4px 14px 0 rgba(0, 0, 0, 0.69);
+    background-color: $eerie-black;
   }
-}
 
-.menu-icon {
-  color: $cultured;
-  @include scaleSvg(42px);
+  &__logo {
+    @include scaleSvg(52px);
 
-  &:hover {
-    color: $paradise-pink;
+    &:hover {
+      opacity: 0.75;
+    }
   }
-}
 
-.navbar-scrolled {
-  box-shadow: 1px 4px 14px 0 rgba(0, 0, 0, 0.69);
-  background-color: $gunmetal;
+  &__menu {
+    @include scaleSvg(42px);
+    z-index: 9998;
+    color: $cultured;
+
+    &:hover {
+      color: $tart-orange;
+    }
+  }
 }

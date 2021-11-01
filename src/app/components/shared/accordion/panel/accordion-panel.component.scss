@@ -4,7 +4,7 @@
 %button-base {
   width: 100%;
   color: $cultured;
-  border: 3px solid $paradise-pink;
+  border: 3px solid $tart-orange;
   background-color: rgba(17, 20, 23, 0.1);
   padding: 10px 15px 10px 15px;
   position: relative;
@@ -18,11 +18,23 @@
 
     &--opened {
       @extend %button-base;
+
+      &:active, &:focus {
+        box-shadow: 0 0 0 3px rgba(238, 238, 238, 0.5);
+      }
+    }
+
+    &:active, &:focus {
       box-shadow: 0 0 0 3px rgba(238, 238, 238, 0.5);
     }
   }
 
   &--first {
+
+    .accordion__button {
+      border-bottom: 1px solid $tart-orange;
+    }
+
     .accordion__button, .accordion__button--opened {
       border-radius: $card-border-radius $card-border-radius 0 0;
     }
@@ -31,26 +43,36 @@
   &--middle {
 
     .accordion__button {
-      border-bottom: 0;
+      border-bottom: 2px solid $tart-orange;
+    }
+
+    .accordion__button--opened {
+      border-top: 2px solid $tart-orange;
+    }
+
+    .accordion__button--opened + .accordion__content-wrapper {
+      border-bottom: 2px solid $tart-orange;
     }
   }
 
   &--last {
 
     .accordion__button {
+      border-top: 1px solid $tart-orange;
       border-radius: 0 0 $card-border-radius $card-border-radius;
     }
 
     .accordion__button--opened {
+      border-top: 1px solid $tart-orange;
       border-radius: 0;
     }
 
-    .accordion__content {
+    .accordion__content-wrapper {
       border-radius: 0 0 $card-border-radius $card-border-radius;
     }
 
-    .accordion__button--opened + .accordion__content {
-      border-bottom: 3px solid $paradise-pink;
+    .accordion__button--opened + .accordion__content-wrapper {
+      border-bottom: 3px solid $tart-orange;
     }
   }
 
@@ -63,15 +85,14 @@
     fill: $cultured
   }
 
-  &__content {
-    padding: 5px 10px 5px 10px;
-    background: rgba(58, 71, 80, 0.5);
-    border-right: 3px solid $paradise-pink;
-    border-left: 3px solid $paradise-pink;
+  &__content-wrapper {
+    background: rgba(58, 71, 80, 0.25);
+    border-right: 3px solid $tart-orange;
+    border-left: 3px solid $tart-orange;
     @include scaleText(15px);
 
     .accordion__list-item::marker {
-      color: $paradise-pink !important;
+      color: $tart-orange !important;
       content: "●" !important;
     }
 
@@ -80,12 +101,13 @@
     }
   }
 
+  &__content {
+    padding: 5px 10px 5px 10px;
+  }
+
   &__inner-title {
     font-weight: 600;
     font-style: italic;
   }
 
-  .accordion__button + .accordion__content {
-    padding: 0;
-  }
 }

@@ -4,20 +4,20 @@
 
 .card {
   padding: 20px;
-  border: 5px solid $paradise-pink;
-  box-shadow: 0 0 0 5px $charcoal;
+  border: 5px solid $tart-orange;
+  box-shadow: 0 0 0 5px $jet;
   border-radius: $card-border-radius;
 
   &__side-photo {
-    border: 2px solid $charcoal;
+    border: 2px solid $jet;
     height: calc(248px + (100vw / 320));
     width: calc(230px + (100vw / 320));
-    box-shadow: $pink-shadow;
+    box-shadow: $tart-orange-shadow;
     border-radius: $card-border-radius;
   }
 
   &__link {
-    color: $paradise-pink;
+    color: $tart-orange;
   }
 
   &__link:hover {
@@ -32,20 +32,15 @@
     font-weight: bold;
     border-radius: $card-border-radius;
     background: $cultured;
-    color: $gunmetal;
+    color: $eerie-black;
     margin-bottom: 10px;
     padding: 5px;
-    box-shadow: $pink-shadow;
-    border: 2px solid $charcoal;
+    box-shadow: $tart-orange-shadow;
+    border: 2px solid $jet;
   }
 }
 
 .section {
   padding-top: 17vh;
   padding-bottom: 17vh;
-
-  &--first {
-    padding-top: 10px;
-    padding-bottom: 17vh;
-  }
 }

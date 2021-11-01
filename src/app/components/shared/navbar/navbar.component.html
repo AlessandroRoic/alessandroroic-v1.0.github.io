@@ -1,10 +1,9 @@
-<nav [ngClass]="{ 'navbar-scrolled': isScrolled }" class="navbar fixed-top p-0">
-  <svg (click)="reloadPage()" class="navbar-toggler logo">
+<nav [ngClass]="{ 'navbar-scrolled': isScrolled }" class="navbar fixed-top p-0" id="navbar">
+  <svg class="navbar__logo" (click)="reloadPage()">
     <use href="assets/icons/icons.svg#site-logo"></use>
   </svg>
-  <div class="navbar-toggler" (click)="showSideNav()" *ngIf="!sideNavOpened">
-    <svg class="menu-icon">
-      <use [attr.href]="'assets/icons/icons.svg#menu-right'"></use>
-    </svg>
-  </div>
+
+  <svg class="navbar__menu" (click)="showSideNav()" *ngIf="!sideNavOpened">
+    <use [attr.href]="'assets/icons/icons.svg#menu-right'"></use>
+  </svg>
 </nav>

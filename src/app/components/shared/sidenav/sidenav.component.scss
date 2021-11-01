@@ -11,17 +11,17 @@
   background: rgba(0, 0, 0, 0.5);
 
   .menu {
-    background: $charcoal;
+    background: $jet;
 
     &__text {
       color: $cultured;
       font-weight: bold;
       @include scaleText(25px);
       text-decoration: underline;
-      text-decoration-color: $paradise-pink;
+      text-decoration-color: $tart-orange;
 
       &:hover {
-        color: $paradise-pink;
+        color: $tart-orange;
         text-decoration-color: $cultured;
       }
     }
@@ -31,7 +31,7 @@
       color: $cultured;
 
       &:hover {
-        color: $paradise-pink;
+        color: $tart-orange;
       }
     }
   }
