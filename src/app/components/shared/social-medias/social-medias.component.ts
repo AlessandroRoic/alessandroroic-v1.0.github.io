@@ -16,4 +16,8 @@ export default class SocialMediasComponent {
   openSite(siteUrl: string): void {
     this.utils.openSite(siteUrl);
   }
+
+  downloadCv(): void {
+    this.utils.downloadCv();
+  }
 }

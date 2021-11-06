@@ -12,4 +12,8 @@ export default class UtilsService {
   openSite(siteUrl: string): void {
     window.open(`https://${siteUrl}`, '_blank');
   }
+
+  downloadCv(): void {
+    window.open('/assets/documents/RoicAlessandroCV.pdf', '_blank');
+  }
 }
