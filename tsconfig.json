@@ -23,7 +23,7 @@
     "noImplicitReturns": true,
     "forceConsistentCasingInFileNames": true,
     "noPropertyAccessFromIndexSignature": true,
-    "noImplicitOverride": true
+    "noImplicitOverride": true,
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -50,6 +50,11 @@ export const accordionSlide = trigger('accordionSlide', [
       overflow: 'hidden',
     }),
   ),
-  state('open', style({ overflow: 'hidden' })),
+  state(
+    'open',
+    style({
+      overflow: 'hidden',
+    }),
+  ),
   transition('open<=>close', animate('0.35s ease-in-out')),
 ]);
