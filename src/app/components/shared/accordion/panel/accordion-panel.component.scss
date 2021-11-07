@@ -86,6 +86,8 @@
   }
 
   &__content-wrapper {
+    position: relative;
+    overflow: hidden;
     background: rgba(58, 71, 80, 0.25);
     border-right: 3px solid $tart-orange;
     border-left: 3px solid $tart-orange;

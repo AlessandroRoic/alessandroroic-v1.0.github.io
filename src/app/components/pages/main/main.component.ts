@@ -11,17 +11,17 @@ export default class MainComponent implements OnInit {
   pills = [
     'Javascript (ES6+)',
     'Typescript',
-    'SCSS',
+    'Sass',
     'Angular',
     'Node.js',
     'NgRx',
     'RxJs',
+    'Redux',
     'Bootstrap',
     'Java EE',
     'Spring',
     'PostgreSQL',
     'Scrum',
-    'Bootstrap',
   ];
 
   ngOnInit(): void {

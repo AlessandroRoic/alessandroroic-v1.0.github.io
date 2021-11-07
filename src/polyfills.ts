@@ -66,3 +66,5 @@ import * as smoothscroll from 'smoothscroll-polyfill';
 
 // kick off the polyfill!
 smoothscroll.polyfill();
+
+import 'smoothscroll-anchor-polyfill';

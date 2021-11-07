@@ -47,13 +47,13 @@ export const accordionSlide = trigger('accordionSlide', [
     'close',
     style({
       height: 0,
-      overflow: 'hidden',
+      transform: 'translate3d(0, 0, 0)',
     }),
   ),
   state(
     'open',
     style({
-      overflow: 'hidden',
+      height: '*',
     }),
   ),
   transition('open<=>close', animate('0.35s ease-in-out')),
