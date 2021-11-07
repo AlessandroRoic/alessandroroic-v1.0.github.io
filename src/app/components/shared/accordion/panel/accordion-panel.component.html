@@ -3,9 +3,10 @@
     (click)="openAccordion()"
     [ngClass]="opened ? 'accordion__button--opened' : 'accordion__button'"
     class="d-flex justify-content-between"
+    aria-labelledby="accordion button"
   >
     <span class="accordion__outer-title">{{ title }}</span>
-    <svg [@rotateArrow]="opened ? 'open' : 'close'" class="align-self-center accordion__arrow">
+    <svg [@rotateArrow]="opened ? 'open' : 'close'" class="align-self-center accordion__arrow" aria-label="accordion arrow">
       <use href="assets/icons/icons.svg#chevron-up"></use>
     </svg>
   </button>

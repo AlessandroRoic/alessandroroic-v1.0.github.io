@@ -25,6 +25,6 @@ export default class MainComponent implements OnInit {
   ];
 
   ngOnInit(): void {
-    this.slides = ['curiosone-bot-logo.png', 'logo.svg'].map((slide: string) => `../../../../assets/slides/${slide}`);
+    this.slides = ['curiosone-bot-logo.webp', 'logo.svg'].map((slide: string) => `../../../../assets/slides/${slide}`);
   }
 }

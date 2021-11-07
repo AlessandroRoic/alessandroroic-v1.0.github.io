@@ -18,6 +18,20 @@ body, html {
   font-family: 'Rubik', sans-serif
 }
 
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: $jet;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $cultured;
+  border-radius: $card-border-radius;
+  border: 2px solid $eerie-black;
+}
+
 @font-face {
   font-family: 'Rubik';
   font-style: normal;

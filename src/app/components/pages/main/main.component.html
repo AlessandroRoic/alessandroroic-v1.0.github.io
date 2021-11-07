@@ -1,6 +1,6 @@
 <section class="row align-items-center justify-content-center g-0 section vh-100" id="intro">
   <header class="col-12 col-md-10 col-lg-8 col-xxl-6 card">
-    <svg viewBox="0 0 169 60">
+    <svg viewBox="0 0 169 60" aria-label="welcome card">
       <use href="assets/icons/icons.svg#welcome-card"></use>
     </svg>
   </header>
@@ -20,13 +20,13 @@
           alt="profile"
           class="card__side-photo d-block float-none float-md-start me-auto ms-auto mb-3 mb-md-4 mt-md-4 me-md-4"
           src="../../../../assets/images/profile.webp"
+          aria-label="profile picture"
         />
         <div>
-          Hi, I'm Alessandro and as you read before in the giant sign above I'm a Front End Developer. I've worked in a
-          <a class="card__link" href="#jpanik">small software business</a> and currently working in a
-          <a class="card__link" href="#accenture">major consulting multinational</a>. Right now my focus is on improving and developing my
-          skills that I use at work, but I'm always interested in trying new stuff out and learning more. I have many side-projects and
-          ideas to realize and hopefully they will see the light soon, so stay tuned!
+          Hi, I'm Alessandro and as you read before in the giant sign above I'm a Front End Developer. I have 2 years of experience building
+          modular and responsive website design. Right now my focus is on improving and developing my skills, but I'm always interested in
+          trying new stuff out and learning more. I have many side-projects and ideas to realize and hopefully they will see the light soon,
+          so stay tuned!
         </div>
       </div>
     </div>
@@ -77,7 +77,7 @@
     <div class="row card__text">
       <div class="col-12">
         <app-accordion>
-          <app-panel [title]="'Accenture'" id="accenture">
+          <app-panel [title]="'Accenture'">
             <p class="mt-1">February 2021 - Currently</p>
             <p class="accordion__inner-title tart-orange">Front End Developer</p>
             <ul>
@@ -98,7 +98,7 @@
               <li class="accordion__list-item">Technologies used: Angular, NgRx, RxJs, Javascript (ES6+), SCSS</li>
             </ul>
           </app-panel>
-          <app-panel [title]="'JPanik'" id="jpanik">
+          <app-panel [title]="'JPanik'">
             <p class="mt-1">October 2019 - February 2021</p>
             <p class="accordion__inner-title tart-orange">Full Stack Developer</p>
             <ul>
