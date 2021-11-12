@@ -1,15 +1,5 @@
 @import "variables";
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
-@import '~bootstrap/scss/mixins';
-@import '~bootstrap/scss/utilities';
-@import '~bootstrap/scss/reboot';
-@import '~bootstrap/scss/containers';
-@import '~bootstrap/scss/grid';
-@import '~bootstrap/scss/navbar';
-@import '~bootstrap/scss/helpers';
-@import '~bootstrap/scss/utilities/api';
-@import "~bootstrap/scss/type";
+@import "styles/custom_boostrap.scss";
 
 body, html {
   background-color: $eerie-black;
@@ -22,14 +12,9 @@ body::-webkit-scrollbar {
   width: 12px;
 }
 
-body::-webkit-scrollbar-track {
-  background: $jet;
-}
-
 body::-webkit-scrollbar-thumb {
-  background-color: $cultured;
+  background-color: $spanish-grey;
   border-radius: $card-border-radius;
-  border: 2px solid $eerie-black;
 }
 
 @font-face {
