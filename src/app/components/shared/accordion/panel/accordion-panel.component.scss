@@ -91,7 +91,6 @@
     background: rgba(63, 62, 61, 0.5);
     border-right: 3px solid $tart-orange;
     border-left: 3px solid $tart-orange;
-    @include scaleText(15px);
 
     .accordion__list-item::marker {
       color: $tart-orange !important;

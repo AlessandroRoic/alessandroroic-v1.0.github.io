@@ -16,7 +16,7 @@
     &__text {
       color: $cultured;
       font-weight: bold;
-      @include scaleText(25px);
+      font-size: 1.47rem;
       text-decoration: underline;
       text-decoration-color: $tart-orange;
 

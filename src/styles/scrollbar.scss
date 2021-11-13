@@ -1,0 +1,10 @@
+@import "../variables";
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $spanish-grey;
+  border-radius: $card-border-radius;
+}
