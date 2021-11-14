@@ -1,8 +1,10 @@
-![Logo](assets\images\logo.svg)
+![Logo](/src/assets/images/logo.svg)
 # alessandroroic.github.io
-Personal website built with [Angular](https://angular.io/), designed and developed to showcase my skills and latest projects
+Personal website built with [Angular](https://angular.io/), designed and developed to showcase my skills and latest projects.
 
 [Check it out!](https://alessandroroic.github.io/)
+
+![Snapshot](/src/assets/images/site-snapshot.png)
 
 ### Why is it a public repo?
 To showcase this project code and to make it available to whomever wants to take inspiration from it. 
