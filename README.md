@@ -18,7 +18,7 @@ You can find more information in the licence section.
 - RxJs
 - PurgeCSS
 
-##Licence
+## Licence
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
 See [LICENSE](https://github.com/AlessandroRoic/alessandroroic.github.io/blob/dev/LICENSE) for more information.
