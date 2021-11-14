@@ -25,6 +25,6 @@ export default class HomePageComponent implements OnInit {
   ];
 
   ngOnInit(): void {
-    this.slides = ['curiosone-bot-logo.webp', 'logo.svg'].map((slide: string) => `../../../../assets/slides/${slide}`);
+    this.slides = ['curiosone-bot-logo.webp'].map((slide: string) => `../../../../assets/slides/${slide}`);
   }
 }

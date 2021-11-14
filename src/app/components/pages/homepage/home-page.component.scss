@@ -2,10 +2,6 @@
 @import "../../../../styles/mixins";
 @import "../../../../styles/colors";
 
-.main-wrapper {
-
-}
-
 .section {
   padding-top: 17vh;
   padding-bottom: 17vh;
@@ -18,13 +14,13 @@
   border-radius: $card-border-radius;
 
   &__welcome-card {
-    font-size: 0.94rem;
+    font-size: 0.84rem;
   }
 
   &__side-photo {
     border: 2px solid $jet;
-    height: calc(257px + (100vw / 320));
-    width: calc(230px + (100vw / 320));
+    @include scaleHeight(257px);
+    @include scaleWidth(230px);
     box-shadow: $tart-orange-shadow;
     border-radius: $card-border-radius;
   }
@@ -43,7 +39,7 @@
     background: $cultured;
     color: $eerie-black;
     margin-bottom: 10px;
-    padding: 5px;
+    padding: 5px 8px 5px 8px;
     box-shadow: $tart-orange-shadow;
     border: 2px solid $jet;
   }

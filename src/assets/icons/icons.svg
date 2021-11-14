@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg">
   <symbol id="site-logo" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
     <defs>
-      <text alignment-baseline="before-edge" dominant-baseline="text-before-edge" font-family="Rubik" font-size="16"
-            font-style="normal" font-weight="normal"
-            id="e1Ztn7UdIo" letter-spacing="0" style="line-height:100%"
-            transform="matrix(1 0 0 1 -8.531250000000004 5.512959116914091)" x="24.54"
-            xml:space="preserve" y="1"><tspan alignment-baseline="before-edge" dominant-baseline="text-before-edge" dy="0em" text-anchor="middle" x="24.54">A</tspan></text>
+      <text id="e1Ztn7UdIo" x="24.54" y="1" font-size="14" font-family="Rubik" font-weight="normal" font-style="normal"
+            letter-spacing="0" alignment-baseline="before-edge"
+            transform="matrix(1 0 0 1 -8.531250000000004 5.512959116914091)" style="line-height:100%"
+            xml:space="preserve"
+            dominant-baseline="text-before-edge"><tspan x="24.54" dy="0em" alignment-baseline="before-edge" dominant-baseline="text-before-edge" text-anchor="middle">A</tspan></text>
       <path
         d="M24.42 17.51C22.73 19.19 18.42 23.46 16.73 25.14C16.3 25.56 15.62 25.55 15.19 25.13C13.52 23.44 9.25 19.13 7.57 17.44C7.15 17.01 7.15 16.33 7.57 15.91C9.27 14.23 13.57 9.96 15.27 8.28C15.69 7.86 16.38 7.86 16.8 8.28C18.48 9.98 22.75 14.28 24.43 15.98C24.85 16.4 24.84 17.09 24.42 17.51Z"
         id="b9g5gzEfKn"></path>
