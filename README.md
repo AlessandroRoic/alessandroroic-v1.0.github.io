@@ -1,5 +1,5 @@
-![Logo](/src/assets/images/logo.png)
-# alessandroroic.github.io
+
+# ![Logo](/src/assets/images/logo.png) alessandroroic.github.io
 Personal website built with [Angular](https://angular.io/), designed and developed to showcase my skills and latest projects.
 
 [Check it out!](https://alessandroroic.github.io/)
