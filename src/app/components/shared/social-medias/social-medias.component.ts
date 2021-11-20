@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import UtilsService from '../../../services/utils.service';
-import { fadeInGrow, item } from '../../../animations/fade-animations';
+import { fadeInGrow, item } from '../../../animations/fade.animation';
 
 @Component({
   selector: 'app-social-medias',
