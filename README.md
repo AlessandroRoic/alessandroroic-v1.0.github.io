@@ -6,14 +6,14 @@ Personal website built with [Angular](https://angular.io/), designed and develop
 
 ![Snapshot](/src/assets/images/site-snapshot.png)
 
-### Why is it a public repo?
+## Why is it a public repo?
 To showcase this project code and to make it available to whomever wants to take inspiration from it. 
 Of course suggestions and improvements are highly recommended, so feel free to create a pull request or issue.
 Although this repo is public, and you can fork it and use it however you want 
 you must give appropriate credit, provide a link to the license, and indicate if changes were made.
 You can find more information in the licence section.
 
-### What libraries / frameworks are you using?
+## What libraries / frameworks are you using?
 - Angular 12
 - NgRx 12
 - Bootstrap 5
