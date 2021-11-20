@@ -1,5 +1,12 @@
-import { Component, Input } from '@angular/core';
-import { item } from '../../../animations/fade-animations';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { fromEvent, Observable, Subject } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { distinctUntilChanged, map, takeUntil } from 'rxjs/operators';
+import UtilsService from 'src/app/services/utils.service';
+import { item } from '../../../animations/fade.animation';
+import { getPageScrolled } from '../../../store/selectors/ui-store.selector';
+import { AppState } from '../../../store/interfaces/app-state';
+import { setPageScrolled } from '../../../store/actions/sidenav.action';
 
 @Component({
   selector: 'app-back-top-arrow',
@@ -7,15 +14,31 @@ import { item } from '../../../animations/fade-animations';
   styleUrls: ['./back-top-arrow.component.scss'],
   animations: [item],
 })
-export default class BackTopArrowComponent {
-  @Input() isScrolled: boolean;
+export default class BackTopArrowComponent implements OnInit, OnDestroy {
+  isScrolled$: Observable<boolean>;
+  private onDestroy$: Subject<void> = new Subject();
 
-  public goBackTop(): void {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth',
-    });
-    this.isScrolled = false;
+  constructor(private store$: Store<AppState>, private utils: UtilsService) {}
+
+  ngOnInit(): void {
+    this.isScrolled$ = this.store$.select(getPageScrolled);
+    fromEvent(window, 'scroll')
+      .pipe(
+        map(() => (window.pageYOffset || document.documentElement.scrollTop) > 200),
+        distinctUntilChanged(),
+        takeUntil(this.onDestroy$),
+      )
+      .subscribe((pageScrolled: boolean) => {
+        this.store$.dispatch(setPageScrolled({ pageScrolled }));
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.onDestroy$.next();
+    this.onDestroy$.complete();
+  }
+
+  goBackTop(): void {
+    this.utils.scrollTop();
   }
 }

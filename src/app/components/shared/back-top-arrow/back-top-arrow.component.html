@@ -1,3 +1,3 @@
-<svg (click)="goBackTop()" *ngIf="isScrolled" @item class="arrow" aria-label="back top arrow">
+<svg (click)="goBackTop()" *ngIf="isScrolled$ | async" @item class="arrow" aria-label="back top arrow">
   <use href="assets/icons/icons.svg#arrow-up"></use>
 </svg>

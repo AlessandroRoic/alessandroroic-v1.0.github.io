@@ -1,6 +1,6 @@
-import {createAction} from '@ngrx/store';
+import {createAction, props} from '@ngrx/store';
 import {Action} from '../enums/ui-action.enum';
 
-export const openSideNav = createAction(Action.SIDE_NAV_OPENED);
+export const toggleSideNav = createAction(Action.SIDE_NAV_TOGGLE, props<{ sideNavOpened: boolean }>());
 
-export const closeSideNav = createAction(Action.SIDE_NAV_CLOSED);
+export const setPageScrolled = createAction(Action.PAGE_SCROLLED, props<{ pageScrolled: boolean }>());

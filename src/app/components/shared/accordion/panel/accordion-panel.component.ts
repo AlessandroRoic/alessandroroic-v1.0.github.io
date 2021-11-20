@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
-import { accordionSlide } from '../../../../animations/slide-animations';
-import rotateArrow from '../../../../animations/rotation-animations';
+import { accordionSlide } from '../../../../animations/slide.animation';
+import rotateArrow from '../../../../animations/rotation.animations';
 
 @Component({
   selector: 'app-panel',

@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,13 +6,5 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export default class AppComponent {
-  isScrolled: boolean;
-
   title = 'Alessandro Roic';
-
-  @HostListener('window:scroll', [])
-  onScrollActivateArrow(): void {
-    const scrollLength: number = window.pageYOffset || document.documentElement.scrollTop;
-    this.isScrolled = scrollLength > 50;
-  }
 }

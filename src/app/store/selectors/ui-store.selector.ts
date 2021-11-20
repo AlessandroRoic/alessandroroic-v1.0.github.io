@@ -10,3 +10,8 @@ export const getSideNavOpened: MemoizedSelector<AppState, boolean> = createSelec
   getUIStore,
   (state: UIStore): boolean => (state.sideNavOpened),
 );
+
+export const getPageScrolled: MemoizedSelector<AppState, boolean> = createSelector(
+  getUIStore,
+  (state: UIStore): boolean => (state.pageScrolled),
+);

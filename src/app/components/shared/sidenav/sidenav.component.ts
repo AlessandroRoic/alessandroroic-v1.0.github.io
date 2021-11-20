@@ -1,12 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { closeSideNav } from 'src/app/store/actions/sidenav.action';
-import { takeUntil } from 'rxjs/operators';
-import { fadeInGrow, item } from '../../../animations/fade-animations';
-import { overlayFade, sideNav, sideNavSlide } from '../../../animations/slide-animations';
+import { fadeInGrow, item } from '../../../animations/fade.animation';
+import { overlayFade, sideNav, sideNavSlide } from '../../../animations/slide.animation';
 import { AppState } from '../../../store/interfaces/app-state';
 import { getSideNavOpened } from '../../../store/selectors/ui-store.selector';
+import { toggleSideNav } from '../../../store/actions/sidenav.action';
 
 @Component({
   selector: 'app-sidebar',
@@ -15,19 +14,13 @@ import { getSideNavOpened } from '../../../store/selectors/ui-store.selector';
   animations: [fadeInGrow, item, sideNavSlide, overlayFade, sideNav],
 })
 export default class SidenavComponent implements OnInit, OnDestroy {
-  sideNavOpened: boolean;
-
+  sideNavOpened$: Observable<boolean>;
   private onDestroy$: Subject<void> = new Subject<void>();
 
   constructor(private store$: Store<AppState>) {}
 
   ngOnInit(): void {
-    this.store$
-      .select(getSideNavOpened)
-      .pipe(takeUntil(this.onDestroy$))
-      .subscribe((sideNavOpened: boolean) => {
-        this.sideNavOpened = sideNavOpened;
-      });
+    this.sideNavOpened$ = this.store$.select(getSideNavOpened);
   }
 
   ngOnDestroy(): void {
@@ -36,6 +29,6 @@ export default class SidenavComponent implements OnInit, OnDestroy {
   }
 
   closeSideNav(): void {
-    this.store$.dispatch(closeSideNav());
+    this.store$.dispatch(toggleSideNav({ sideNavOpened: false }));
   }
 }
