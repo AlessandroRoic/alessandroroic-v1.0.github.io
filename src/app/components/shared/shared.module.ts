@@ -7,6 +7,7 @@ import BackTopArrowComponent from './back-top-arrow/back-top-arrow.component';
 import AccordionPanelComponent from './accordion/panel/accordion-panel.component';
 import CarouselComponent from './carousel/carousel.component';
 import NavbarComponent from './navbar/navbar.component';
+import CardComponent from './card/card.component';
 
 const components = [
   SidenavComponent,
@@ -16,6 +17,7 @@ const components = [
   AccordionPanelComponent,
   CarouselComponent,
   NavbarComponent,
+  CardComponent,
 ];
 
 @NgModule({

@@ -3,17 +3,20 @@
 @import "../../../../styles/colors";
 
 .section {
-  padding-top: 17vh;
-  padding-bottom: 17vh;
-}
 
-.card {
-  padding: 20px;
-  border: 5px solid $tart-orange;
-  box-shadow: 0 0 0 5px $jet;
-  border-radius: $card-border-radius;
+  &__content {
+    padding: 20px;
+    border: 5px solid $tart-orange;
+    box-shadow: 0 0 0 5px $jet;
+    border-radius: $card-border-radius;
+  }
 
-  &__welcome-card {
+  &__wrapper {
+    padding-top: 17vh;
+    padding-bottom: 17vh;
+  }
+
+  &__welcome {
     font-size: 0.84rem;
   }
 
@@ -23,14 +26,6 @@
     @include scaleWidth(230px);
     box-shadow: $tart-orange-shadow;
     border-radius: $card-border-radius;
-  }
-
-  &__link {
-    color: $tart-orange;
-  }
-
-  &__link:hover {
-    text-decoration-color: $cultured;
   }
 
   &__pill {
