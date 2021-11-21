@@ -1,13 +1,13 @@
-<section class="row align-items-center justify-content-center g-0 vh-100 section" id="intro">
-  <header class="col-12 col-md-10 col-lg-8 col-xxl-6 card">
-    <svg viewBox="0 0 169 60" aria-label="welcome card" class="card__welcome-card">
+<section class="row align-items-center justify-content-center g-0 vh-100" id="intro">
+  <header class="col-12 col-md-10 col-lg-8 col-xxl-6 section__content">
+    <svg viewBox="0 0 169 60" aria-label="welcome card" class="section__welcome">
       <use href="assets/icons/icons.svg#welcome-card"></use>
     </svg>
   </header>
 </section>
 
-<section class="row align-items-center justify-content-center g-0 section" id="about">
-  <article class="col-12 col-md-10 col-lg-8 col-xxl-6 card">
+<section class="row align-items-center justify-content-center g-0 section__wrapper" id="about">
+  <article class="col-12 col-md-10 col-lg-8 col-xxl-6 section__content">
     <header class="row">
       <div class="col-12">
         <h1 class="tart-orange mb-3"><b>About Me</b></h1>
@@ -18,7 +18,7 @@
       <div class="col-12 col-md-5 col-2xl-3 align-self-center d-flex justify-content-center mb-2 mb-md-0">
         <img
           alt="profile"
-          class="card__side-photo mt-auto mb-auto"
+          class="section__side-photo mt-auto mb-auto"
           src="../../../../assets/images/profile.webp"
           aria-label="profile picture"
         />
@@ -45,7 +45,7 @@
 
     <div class="row">
       <div *ngFor="let pill of pills" class="col-auto">
-        <p class="card__pill">
+        <p class="section__pill">
           {{ pill }}
         </p>
       </div>
@@ -67,8 +67,8 @@
   </article>
 </section>
 
-<section class="row align-items-center justify-content-center g-0 section" id="work">
-  <article class="col-12 col-md-10 col-lg-8 col-xxl-6 card">
+<section class="row align-items-center justify-content-center g-0 section__wrapper" id="work">
+  <article class="col-12 col-md-10 col-lg-8 col-xxl-6 section__content">
     <header class="row">
       <div class="col-12">
         <h1 class="tart-orange mb-3"><b>Work</b></h1>
@@ -141,15 +141,35 @@
   </article>
 </section>
 
-<section class="row align-items-center justify-content-center g-0 section" id="projects">
-  <article class="col-12 col-md-10 col-lg-8 col-xxl-6 card">
+<section class="row align-items-center justify-content-center g-0 section__wrapper" id="projects">
+  <article class="col-12 col-md-10 col-lg-8 col-xxl-6 section__content">
     <header class="row">
       <div class="col-12">
         <h1 class="tart-orange mb-3"><b>Projects</b></h1>
       </div>
     </header>
     <div class="row">
-      <div class="col-12"></div>
+      <div class="col-12 col-md-4 mb-4 mb-md-0">
+        <app-card>
+          <img logo src="assets/images/curiosone.png" alt="curiosone-logo" href="https://curiosone-bot.github.io/" />
+          <div title>Curiosone Bot</div>
+          <div content>Interactive chatbot written in Java</div>
+        </app-card>
+      </div>
+      <div class="col-12 col-md-4 mb-4 mb-md-0">
+        <app-card>
+          <img logo src="assets/images/curiosone.png" alt="curiosone-logo" href="https://curiosone-bot.github.io/" />
+          <div title>Curiosone Bot</div>
+          <div content>Interactive chatbot written in Java</div>
+        </app-card>
+      </div>
+      <div class="col-12 col-md-4 mb-4 mb-md-0">
+        <app-card>
+          <img logo src="assets/images/curiosone.png" alt="curiosone-logo" href="https://curiosone-bot.github.io/" />
+          <div title>Curiosone Bot</div>
+          <div content>Interactive chatbot written in Java</div>
+        </app-card>
+      </div>
     </div>
   </article>
 </section>

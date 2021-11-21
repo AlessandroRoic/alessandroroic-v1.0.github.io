@@ -1,0 +1,18 @@
+<div class="card__wrapper container-fluid">
+  <div class="row justify-content-center">
+    <div class="card__logo col-auto">
+      <ng-content select="[logo]"></ng-content>
+    </div>
+  </div>
+  <div class="row">
+    <div class="card__title col-12 text-center">
+      <b><ng-content select="[title]"></ng-content></b>
+    </div>
+    <div class="card__content col-12">
+      <ng-content select="[content]"></ng-content>
+    </div>
+    <div class="card__link col-12 text-center">
+      <button class="card__button">Check it</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+@import "../../../../variables";
+
+.card {
+
+  &__wrapper {
+    border-radius: $card-border-radius;
+    background: $jet;
+    color: $cultured;
+    padding: 20px;
+    border: 2px solid $jet;
+    box-shadow: $black-shadow;
+  }
+
+  &__logo {
+
+    margin-bottom: 10px;
+
+    img[logo] {
+      border-radius: $card-border-radius;
+      background: $spanish-grey;
+      width: 80px;
+      height: 80px;
+
+      &:hover {
+        box-shadow: $black-shadow;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__content {
+    margin-bottom: 10px;
+  }
+
+  &__button {
+    color: $cultured;
+    border: 2px solid $tart-orange;
+    border-radius: $card-border-radius;
+    background-color: $eerie-black;
+    padding: 5px 10px 5px 10px;
+
+    &:hover {
+      box-shadow: $black-shadow;
+    }
+  }
+}
