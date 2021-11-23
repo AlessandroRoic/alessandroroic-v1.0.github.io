@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import UtilsService from '../../../services/utils.service';
 
 @Component({
   selector: 'app-home-page',
@@ -24,7 +25,13 @@ export default class HomePageComponent implements OnInit {
     'Scrum',
   ];
 
+  constructor(private utils: UtilsService) {}
+
   ngOnInit(): void {
     this.slides = ['curiosone-bot-logo.webp'].map((slide: string) => `../../../../assets/slides/${slide}`);
+  }
+
+  goTo(link: string): void {
+    this.utils.openSite(link);
   }
 }

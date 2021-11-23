@@ -4,6 +4,10 @@
 
 .section {
 
+  &__content-wrapper  {
+    box-shadow: $card-shadow;
+  }
+
   &__content {
     padding: 20px;
     border: 5px solid $tart-orange;
@@ -32,11 +36,11 @@
     font-weight: bold;
     border-radius: $card-border-radius;
     background: $cultured;
-    color: $eerie-black;
+    color: $eerie-black-2;
     margin-bottom: 10px;
     padding: 5px 8px 5px 8px;
     box-shadow: $tart-orange-shadow;
-    border: 2px solid $jet;
+    border: 2px solid $eerie-black-2;
   }
 }
 

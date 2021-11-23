@@ -15,15 +15,11 @@
 
     margin-bottom: 10px;
 
-    img[logo] {
+    img[card-logo], svg[card-logo] {
       border-radius: $card-border-radius;
       background: $spanish-grey;
       width: 80px;
       height: 80px;
-
-      &:hover {
-        box-shadow: $black-shadow;
-      }
     }
   }
 
@@ -35,15 +31,23 @@
     margin-bottom: 10px;
   }
 
-  &__button {
-    color: $cultured;
-    border: 2px solid $tart-orange;
-    border-radius: $card-border-radius;
-    background-color: $eerie-black;
-    padding: 5px 10px 5px 10px;
+  &__link {
 
-    &:hover {
-      box-shadow: $black-shadow;
+    button[card-button] {
+      color: $cultured;
+      border: 2px solid $tart-orange;
+      border-radius: $card-border-radius;
+      background-color: $eerie-black;
+      padding: 5px 10px 5px 10px;
+
+      &:hover {
+        box-shadow: $black-shadow;
+      }
+
+      &:active {
+        transform: translateY(4px);
+      }
     }
+
   }
 }
