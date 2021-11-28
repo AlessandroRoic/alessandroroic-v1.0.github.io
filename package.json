@@ -26,6 +26,7 @@
     "@ngrx/store-devtools": "^12.4.0",
     "@types/smoothscroll-polyfill": "^0.3.1",
     "bootstrap": "5.0.0",
+    "eslint-config-airbnb-base": "^15.0.0",
     "purgecss": "^4.0.3",
     "rxjs": "~6.6.0",
     "smoothscroll-polyfill": "^0.4.4",

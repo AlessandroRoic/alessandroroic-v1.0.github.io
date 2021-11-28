@@ -3,7 +3,7 @@ import { Observable, Subject } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { fadeInGrow, item } from '../../../animations/fade.animation';
 import { overlayFade, sideNav, sideNavSlide } from '../../../animations/slide.animation';
-import { AppState } from '../../../store/interfaces/app-state';
+import AppState from '../../../store/interfaces/app-state';
 import { getSideNavOpened } from '../../../store/selectors/ui-store.selector';
 import { toggleSideNav } from '../../../store/actions/sidenav.action';
 

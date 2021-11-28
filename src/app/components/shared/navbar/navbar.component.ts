@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { AppState } from '../../../store/interfaces/app-state';
+import AppState from '../../../store/interfaces/app-state';
 import UtilsService from '../../../services/utils.service';
-import { getPageScrolled, getSideNavOpened } from '../../../store/selectors/ui-store.selector';
+import { getPageScroll, getSideNavOpened } from '../../../store/selectors/ui-store.selector';
 import { toggleSideNav } from '../../../store/actions/sidenav.action';
+import { PageScroll } from '../../../store/models/page-scroll';
+import { ScrollDirection } from '../enums/scroll-direction';
 
 @Component({
   selector: 'app-navbar',
@@ -12,14 +14,15 @@ import { toggleSideNav } from '../../../store/actions/sidenav.action';
   styleUrls: ['./navbar.component.scss'],
 })
 export default class NavbarComponent implements OnInit {
-  isScrolled$: Observable<boolean>;
+  scrollPage$: Observable<PageScroll>;
   sideNavOpened$: Observable<boolean>;
+  scrollDirection = ScrollDirection;
 
   constructor(private store$: Store<AppState>, private utils: UtilsService) {}
 
   ngOnInit(): void {
     this.sideNavOpened$ = this.store$.select(getSideNavOpened);
-    this.isScrolled$ = this.store$.select(getPageScrolled);
+    this.scrollPage$ = this.store$.select(getPageScroll);
   }
 
   reloadPage(): void {

@@ -1,12 +1,17 @@
 @import "../../../../variables";
 @import "../../../../styles/mixins";
 
-.navbar {
+.custom-navbar {
   padding: 10px !important;
+  transition: transform 0.3s;
 
   &-scrolled {
     box-shadow: 1px 4px 14px 0 rgba(0, 0, 0, 0.69);
     background-color: $eerie-black;
+  }
+
+  &-scrolled-up {
+    transform: translateY(-100px);
   }
 
   &__logo {
@@ -20,7 +25,6 @@
 
   &__menu {
     @include scaleSvg(42px);
-    z-index: 9998;
     color: $cultured;
 
     &:hover {

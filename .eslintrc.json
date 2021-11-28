@@ -2,7 +2,11 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "@angular-eslint",
+    "prettier",
+    "rxjs",
+    "import"
   ],
   "env": {
     "node": true
@@ -13,6 +17,7 @@
   "overrides": [
     {
       "files": [
+        "*.service.ts",
         "*.component.ts",
         "*.module.ts",
         "*.animations.ts"
@@ -27,13 +32,13 @@
       },
       "extends": [
         "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "airbnb-base",
         "airbnb-typescript/base",
         "plugin:@angular-eslint/recommended",
-        "prettier",
         "plugin:prettier/recommended",
-        "plugin:rxjs/recommended"
+        "plugin:rxjs/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
       ],
       "rules": {
         "@typescript-eslint/lines-between-class-members": [
@@ -88,8 +93,7 @@
           {
             "code": 140
           }
-        ],
-        "@angular-eslint/template/no-any": "error"
+        ]
       }
     }
   ]

@@ -1,4 +1,6 @@
-export interface UIStore {
+import {PageScroll} from '../models/page-scroll';
+
+export default interface UIStore {
   sideNavOpened: boolean;
-  pageScrolled: boolean;
+  pageScroll: PageScroll;
 }

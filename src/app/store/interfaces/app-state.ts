@@ -1,5 +1,5 @@
-import {UIStore} from './ui-store';
+import UIStore from './ui-store';
 
-export interface AppState {
+export default interface AppState {
   UIStore: UIStore;
 }

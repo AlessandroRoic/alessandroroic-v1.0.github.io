@@ -1,10 +1,15 @@
 import {Action, createReducer, on} from '@ngrx/store';
-import {UIStore} from '../interfaces/ui-store';
+import UIStore from '../interfaces/ui-store';
 import {setPageScrolled, toggleSideNav} from '../actions/sidenav.action';
+import {ScrollDirection} from '../../components/shared/enums/scroll-direction';
+import {PageScroll} from '../models/page-scroll';
 
 const initialState: UIStore = {
   sideNavOpened: false,
-  pageScrolled: false
+  pageScroll: {
+    scrolled: false,
+    direction: ScrollDirection.DOWN,
+  },
 };
 
 const manageToggleSideNav = (state: UIStore, {sideNavOpened}: { sideNavOpened: boolean }) => ({
@@ -12,9 +17,9 @@ const manageToggleSideNav = (state: UIStore, {sideNavOpened}: { sideNavOpened: b
   sideNavOpened,
 });
 
-const managePageScrolled = (state: UIStore, {pageScrolled}: { pageScrolled: boolean }) => ({
+const managePageScrolled = (state: UIStore, {pageScroll}: { pageScroll: PageScroll }): UIStore => ({
   ...state,
-  pageScrolled,
+  pageScroll,
 });
 
 const sideBarReducer = createReducer(
@@ -23,6 +28,6 @@ const sideBarReducer = createReducer(
   on(setPageScrolled, managePageScrolled)
 );
 
-export function UIStoreReducer(state: UIStore = initialState, action: Action): UIStore {
+export default function UIStoreReducer(state: UIStore = initialState, action: Action): UIStore {
   return sideBarReducer(state, action);
 }
