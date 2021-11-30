@@ -1,6 +1,15 @@
 
-# ![Logo](/src/assets/favicon.png) alessandroroic.github.io
+# ![Logo](/src/assets/favicon.png) alessandroroic.github.io - v1.0
 Personal website built with [Angular](https://angular.io/), designed and developed to showcase my skills and latest projects.
+The initial purpose of this project was to make use of my current knowledge on Front End development with
+2 years of experience on Angular, NgRx, RxJs and Bootstrap. Even though I think these frameworks and libraries are worth and
+are very valuable for a big project (which is what I work in at my job) that was already made with it, they feel a bit overkill
+for a personal website, and I wanted to make my portfolio as modular as possible. 
+
+So from the next version I'm going to:
+- Migrate from Angular to another framework that best suits this small project
+- Cut down on unecessary libraries and plugins
+- Build a modular and easly upgradable personal portfolio
 
 [Check it out!](https://alessandroroic.github.io/)
 
