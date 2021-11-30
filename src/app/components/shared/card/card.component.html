@@ -1,4 +1,4 @@
-<div class="card__wrapper container-fluid">
+<div class="card__wrapper d-flex flex-column">
   <div class="row justify-content-center">
     <div class="card__logo col-auto">
       <ng-content select="[card-logo]"></ng-content>
@@ -11,6 +11,8 @@
     <div class="card__content col-12">
       <ng-content select="[card-content]"></ng-content>
     </div>
+  </div>
+  <div class="row flex-grow-1 align-content-end">
     <div class="card__link col-12 text-center">
       <ng-content select="[card-button]"></ng-content>
     </div>

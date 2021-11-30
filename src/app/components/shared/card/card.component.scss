@@ -3,6 +3,7 @@
 .card {
 
   &__wrapper {
+    height: 100%;
     border-radius: $card-border-radius;
     background: $jet;
     color: $cultured;
