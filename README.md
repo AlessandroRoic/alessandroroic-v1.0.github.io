@@ -11,7 +11,7 @@ So from the next version I'm going to:
 - Cut down on unecessary libraries and plugins
 - Build a modular and easly upgradable personal portfolio
 
-[Check it out!](https://alessandroroic.github.io/)
+[Check it out!](https://alessandroroic.github.io/alessandroroic-v1.0.github.io/)
 
 ![Snapshot](/src/assets/images/site-snapshot.png)
 
@@ -32,7 +32,7 @@ You can find more information in the licence section.
 ## Licence
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
-See [LICENSE](https://github.com/AlessandroRoic/alessandroroic.github.io/blob/dev/LICENSE) for more information.
+See [LICENSE](https://github.com/AlessandroRoic/alessandroroic-v1.0.github.io/blob/dev/LICENSE) for more information.
 
 This work is licensed under a
 [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
