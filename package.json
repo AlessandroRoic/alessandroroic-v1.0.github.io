@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "start-hmr": "ng serve --hmr",
-    "build": "ng build --configuration production --source-map --base-href /alessandroroic-v1.0.github.io/",
+    "build": "ng build --configuration production --source-map --base-href /alessandroroic-v1.0.github.io/ --deploy-url /alessandroroic-v1.0.github.io/",
     "test": "ng test",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
