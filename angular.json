@@ -117,14 +117,6 @@
             }
           }
         },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy",
-          "options": {
-            "name": "AlessandroRoic",
-            "branch": "master",
-            "repo": "https://github.com/AlessandroRoic/alessandroroic.github.io.git"
-          }
-        }
       }
     }
   },
